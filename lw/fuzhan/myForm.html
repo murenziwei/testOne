@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+           后台首页
+        </title>
+        <link rel="stylesheet" href="style/bootstrap.css">
+		<link rel="stylesheet" href="style/all.css">
+    </head>
+    <body>
+        <!-- 导航头部 -->
+        <header class="fixed-header ">
+           <div class="f_h_content">
+              <div class="fhc_left pull-left">
+	                <div>
+	                   <a href="#" class="f_l_left">山</a>
+	                </div>
+	                <div>
+	                   <a href="#" class="f_l_right"><span class="glyphicon glyphicon-home"></span></a>
+	                </div>
+              </div>
+              <div class="fhc_right pull-right">
+                 <div>
+                    <a href="javascript:void(0)" data-toggle='tooltip' data-placement='auto' title='发布网站' >发布</a>
+                 </div>
+                 <div class="f_r_hover dropdown">
+                    <a href="#" class="dropdown-toggle" ><span class="glyphicon glyphicon-home"></span><span class="badge">0</span></a>
+                   
+                    <ul class="dropdown-menu">
+                      <li><a href="#">我的工单</a></li>
+                      <li><a href="#">提交工单</a></li>
+                    </ul>
+                    
+                 </div>
+                 <div class="f_r_hover dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle='dropdown'><span class="glyphicon glyphicon-home"></span><span class="badge">0</span></a>
+                    
+                    <ul class='dropdown-menu'>
+                      <li><a href="#">查看全部</a></li>
+                    </ul>
+                    
+                 </div>
+                 <div class="f_r_hover dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle='dropdown' >
+                     <i class='glyphicon glyphicon-user'></i>
+                     <span>2309485575@qq.com</span>
+                     <span class="caret"></span>
+                    </a>
+                    
+					<ul class='dropdown-menu'>
+                      <li><a href="#">账号管理</a></li>
+                      <li><a href="#">退出</a></li>
+                    </ul>
+                    
+                 </div>
+              </div>
+              <div class="fhc_aside pull-left">
+                 <button class="btn btn-default" data-toggle='popover' data-trigger="focus" data-content="
+                 <a href='#' class='list-group-item'><span class='glyphicon glyphicon-search'></span>PC网站</a>
+                 <a href='#' class='list-group-item'><span class='glyphicon glyphicon-search'></span>手机网站</a>
+                 <a href='#' class='list-group-item'><span class='glyphicon glyphicon-search'></span>表单</a>
+                 <a href='#' class='list-group-item'><span class='glyphicon glyphicon-search'></span>小程序</a>
+                 "><span class="glyphicon glyphicon-home" data-toggle='dropdown'></span>进入设计</button>
+              </div>
+           </div>
+        </header>
+        <section class="fixed-bottom">
+          <div class='fixed-left scroll_auto'>
+	           <a href="#" class="f_r_control"><span class="glyphicon glyphicon-home"></span></a>
+	           <div class='f_r_normal'>
+	             <ul class="panel-group f_r_ul" id="dedecms">
+		               <li class='panel disable'>网站管理</li>
+		               <li class='panel'>
+		               	   <a href="index.html" class='decideColor'><span class="glyphicon glyphicon-home"></span>后台首页</a>
+		               </li>
+		               <li class="panel">
+			               <a href="javascript:void(0)" data-toggle='collapse' data-parent='#dedecms' data-target='#my_site'> <span class="glyphicon glyphicon-align-right pull-right"></span><div><span class="glyphicon glyphicon-home"></span>我的站点</div></a>
+			               <ul id="my_site" class='collapse'>
+			                  <li><a href="site.html">站点信息</a></li>
+			                  <li><a href="siteLanguage.html">网站语言</a></li>
+			                  <li><a href="domain.html">域名管理</a></li>
+			                  <li><a href="backupRecovery.html">备份恢复</a></li>
+			                  <li><a href="mailServers.html">邮件服务器</a></li>
+			               </ul>
+		               </li>
+		               <li class="panel">
+			               <a href="javascript:void(0)" data-toggle='collapse' data-parent='#dedecms' data-target='#content_management'><span class="glyphicon glyphicon-align-right pull-right"></span><div><span class="glyphicon glyphicon-home"></span>内容管理</div></a>
+			               <ul id="content_management" class="collapse">
+			                  <li><a href="articleManagement.html">文章管理</a></li>
+			                  <li><a href="productControl.html">产品管理</a></li>
+			                  <li><a href="image.html">图片管理</a></li>
+			                  <li><a href="fileManager.html">文件管理</a></li>
+			                  <li><a href="siteMove.html">站点迁入 <span class="badge">Beta</span></a></li>
+			               </ul>
+		               </li>
+		               <li class="panel">
+			               <a href="javascript:void(0);" data-toggle='collapse' data-parent='#dedecms' data-target='#website_operation'><span class="glyphicon glyphicon-align-right pull-right"></span><div><span class="glyphicon glyphicon-home"></span>网站运营</div></a>
+			               <ul id="website_operation" class="collapse">
+			                  <li><a href="messageManagement.html">留言管理</a></li>
+			                  <li><a href="comments.html">评论管理</a></li>
+			               </ul>
+		               </li>
+		               <li class="panel">
+			               <a href="javascript:void(0)" data-toggle='collapse' data-parent='#dedecms' data-target='#member_management'><span class="glyphicon glyphicon-align-right pull-right"></span><div><span class="glyphicon glyphicon-home"></span>会员管理</div></a>
+			               <ul id="member_management" class="collapse">
+			                  <li><a href="member.html">会员列表</a></li>
+			                  <li><a href="memberSet.html">会员中心配置</a></li>
+			                  <li><a href="permissions.html">页面权限</a></li>
+			               </ul>
+		               </li>
+		               <li class="panel">
+			               <a href="javascript:void(0)" data-toggle='collapse' data-parent='#dedecms' data-target='#mall_management'><span class="glyphicon glyphicon-align-right pull-right"></span><div><span class="glyphicon glyphicon-home"></span>商城管理</div></a>
+			               <ul id="mall_management" class="collapse">
+			                  <li><a href="orderManagement.html">订单列表</a></li>
+			                  <li><a href="shoplist.html">商城设置</a></li>
+			               </ul>
+		               </li>
+		               <li class="panel">
+			               <a href="javascript:void(0)" data-toggle='collapse' data-parent='#dedecms' data-target='#seo'><span class="glyphicon glyphicon-align-right pull-right"></span><div><span class="glyphicon glyphicon-home"></span>SEO推广</div></a>
+			               <ul id="seo" class="collapse">
+			                  <li><a href="seoPage.html">页面SEO</a></li>
+			                  <li><a href="robots.html">Robots.txt</a></li>
+			                  <li><a href="websiteMap.html">网站地图</a></li>
+			                  <li><a href="baidu.html">百度统计</a></li>
+			                  <li><a href="siteValidation.html">站点验证</a></li>
+			               </ul>
+		               </li>
+		               <li class="panel">
+			               <a href="javascript:void(0)" data-toggle='collapse' data-parent='#dedecms' data-target='#system_settings'><span class="glyphicon glyphicon-align-right pull-right"></span><div><span class="glyphicon glyphicon-home"></span>系统设置</div></a>
+			               <ul id="system_settings" class="collapse">
+			                  <li><a href="setup.html">显示设置</a></li>
+			                  <li><a href="roleManagement.html">员工角色管理</a></li>
+			                  <li><a href="staffManagement.html">员工管理</a></li>
+			               </ul>
+		               </li>
+		               <li class="panel">
+			               <a href="javascript:void(0)" data-toggle='collapse' data-parent='#dedecms' data-target='#recycle_bin'><span class="glyphicon glyphicon-align-right pull-right"></span><div><span class="glyphicon glyphicon-home"></span>回收站</div></a>
+			               <ul id="recycle_bin" class="collapse">
+			                  <li><a href="page.html">页面</a></li>
+			                  <li><a href="article.html">文章</a></li>
+			                  <li><a href="product.html">产品</a></li>
+			                  <li><a href="picture.html">图片</a></li>
+			                  <li><a href="file.html">文件</a></li>
+			                  <li><a href="form.html">表单</a></li>
+			               </ul>
+		               </li>
+	             </ul>
+	             <ul class="panel-group f_r_ul">
+		               <li class='panel disable'>表单管理</li>
+		               <li class='panel'>
+		               	   <a href="myForm.html" class="decideColor"><span class="glyphicon glyphicon-home"></span>我的表单</a>
+		               </li>
+		         </ul>
+	             <ul class="panel-group f_r_ul">
+		               <li class='panel disable'>微信小程序</li>
+		               <li class='panel'>
+		               	   <a href="myLittleProgram.html"><span class="glyphicon glyphicon-home"></span>我的小程序</a>
+		               </li>
+		               <li class='panel'>
+		               	   <a href="template.html"><span class="glyphicon glyphicon-home"></span>模板消息</a>
+		               </li>
+		         </ul>
+	             <ul class="panel-group f_r_ul">
+		               <li class='panel disable'>微信公众号</li>
+		               <li class='panel'>
+		               	   <a href="customizeMenus.html"><span class="glyphicon glyphicon-home"></span>自定义菜单</a>
+		               </li>
+		               <li class='panel'>
+		               	   <a href="customReply.html"><span class="glyphicon glyphicon-home"></span>自动回复</a>
+		               </li>
+		               <li class='panel'>
+		               	   <a href="wechatPromotion.html"><span class="glyphicon glyphicon-home"></span>微信推广</a>
+		               </li>
+		               <li class='panel'>
+		               	   <a href="accountSettings.html"><span class="glyphicon glyphicon-home"></span>账号设置</a>
+		               </li>
+		         </ul>
+	           </div>
+	           <div class='f_r_title'>
+	              <ul class='frt_ul'>
+	                 <li><a href="javascript:void(0);" class='fu_group'><span class='glyphicon glyphicon-home'></span>
+	                 
+	                 <span class='caret'></span></a></li>
+	                 <li><a href="index.html" data-placement='right' data-toggle="tooltip" title="后台首页" class="glyphicon glyphicon-home decideColor" >
+
+	                 </a></li>
+	                 
+	                 <li>
+	                  <a href="javascript:void(0)" class="glyphicon glyphicon-home" ></a>
+	                  <ul class='f_u_child'>
+	                     <li class='disable'>我的站点</li>
+	                     <li><a href="site.html">站点信息</a></li>
+	                     <li><a href="siteLanguage.html">网站语言</a></li>
+	                     <li><a href="domain.html">域名管理</a></li>
+	                     <li><a href="backupRecovery.html">备份恢复</a></li>
+	                     <li><a href="mailServers.html">邮件服务器</a></li>
+	                  </ul>
+	                 </li>
+	                 <li>
+	                  <a href="javascript:void(0)" class="glyphicon glyphicon-home" ></a>
+	                  <ul class='f_u_child'>
+	                     <li class='disable'>内容管理</li>
+	                     <li><a href="articleManagement.html">文章管理</a></li>
+	                     <li><a href="productControl.html">产品管理</a></li>
+	                     <li><a href="image.html">图片管理</a></li>
+	                     <li><a href="fileManager.html">文件管理</a></li>
+	                     <li><a href="siteMove.html">站点迁入 <span class='badge'>Beta</span></a></li>
+	                  </ul>
+	                 </li>
+	                 <li>
+	                  <a href="javascript:void(0)" class="glyphicon glyphicon-home" ></a>
+	                  <ul class='f_u_child'>
+	                     <li class='disable'>网站运营</li>
+	                     <li><a href="messageManagement.html">留言管理</a></li>
+	                     <li><a href="comments.html">评论管理</a></li>
+	                  </ul>
+	                 </li>
+	                 <li>
+	                  <a href="javascript:void(0)" class="glyphicon glyphicon-home" ></a>
+	                  <ul class='f_u_child'>
+	                     <li class='disable'>会员管理</li>
+	                     <li><a href="member.html">会员列表</a></li>
+	                     <li><a href="memberSet.html">会员中心配置</a></li>
+	                     <li><a href="permissions.html">页面权限</a></li>
+	                  </ul>
+	                 </li>
+	                 <li>
+	                  <a href="javascript:void(0)" class="glyphicon glyphicon-home" ></a>
+	                  <ul class='f_u_child'>
+	                     <li class='disable'>商城管理</li>
+	                     <li><a href="orderManagement.html">订单列表</a></li>
+	                     <li><a href="shoplist.html">商城设置</a></li>
+	                  </ul>
+	                 </li>
+	                 <li>
+	                  <a href="javascript:void(0)" class="glyphicon glyphicon-home" ></a>
+	                  <ul class='f_u_child'>
+	                     <li class='disable'>SEO推广</li>
+	                     <li><a href="seoPage.html">页面SEO</a></li>
+	                     <li><a href="robots.html">Robots.txt</a></li>
+	                     <li><a href="websiteMap.html">网站地图</a></li>
+	                     <li><a href="baidu.html">百度统计</a></li>
+	                     <li><a href="siteValidation.html">站点验证</a></li>
+	                  </ul>
+	                 </li>
+	                 <li>
+	                  <a href="javascript:void(0)" class="glyphicon glyphicon-home" ></a>
+	                  <ul class='f_u_child'>
+	                     <li class='disable'>系统设置</li>
+	                     <li><a href="setup.html">显示设置</a></li>
+	                     <li><a href="roleManagement.html">员工角色管理</a></li>
+	                     <li><a href="staffManagement.html">员工管理</a></li>
+	                  </ul>
+	                 </li>
+	                 <li>
+	                  <a href="javascript:void(0)" class="glyphicon glyphicon-home" ></a>
+	                  <ul class='f_u_child'>
+	                     <li class='disable'>回收站</li>
+	                     <li><a href="page.html">页面</a></li>
+	                     <li><a href="article.html">文章</a></li>
+	                     <li><a href="product.html">产品</a></li>
+	                     <li><a href="picture.html">图片</a></li>
+	                     <li><a href="file.html">文件</a></li>
+	                     <li><a href="form.html">表单</a></li>
+	                  </ul>
+	                 </li>
+	              </ul>
+	              <ul class='frt_ul'>
+	                 <li><a href="javascript:void(0);" class='fu_group'><span class='glyphicon glyphicon-home'></span>
+	                 
+	                 <span class='caret'></span></a></li>
+	                 <li><a href="myForm.html" data-placement='right' data-toggle="tooltip" title="我的表单" class="glyphicon glyphicon-home decideColor" >
+
+	                 </a></li>
+	              </ul>
+
+	              <ul class='frt_ul'>
+	                 <li><a href="javascript:void(0);" class='fu_group'><span class='glyphicon glyphicon-home'></span>
+	                 
+	                 <span class='caret'></span></a></li>
+	                 <li><a href="myLittleProgram.html" data-placement='right' data-toggle="tooltip" title="我的小程序" class="glyphicon glyphicon-home"  >
+
+	                 </a></li>
+	                 <li><a href="template.html" data-placement='right' data-toggle="tooltip" title="模板消息" class="glyphicon glyphicon-home"  >
+
+	                 </a></li>
+	              </ul>
+	              <ul class='frt_ul'>
+	                 <li><a href="javascript:void(0);" class='fu_group'><span class='glyphicon glyphicon-home'></span>
+	                 
+	                 <span class='caret'></span></a></li>
+	                 <li><a href="customizeMenus.html" data-placement='right' data-toggle="tooltip" title="自定义菜单" class="glyphicon glyphicon-home"  >
+
+	                 </a></li>
+	                 <li><a href="customReply.html" data-placement='right' data-toggle="tooltip" title="自动回复" class="glyphicon glyphicon-home"  >
+
+	                 </a></li>
+	                 <li><a href="wechatPromotion.html" data-placement='right' data-toggle="tooltip" title="微信推广" class="glyphicon glyphicon-home"  >
+
+	                 </a></li>
+	                 <li><a href="accountSettings.html" data-placement='right' data-toggle="tooltip" title="账号设置" class="glyphicon glyphicon-home"  >
+
+	                 </a></li>
+	              </ul>
+	           </div>
+          </div>
+          <div class='fixed-right site_padding'>
+			   <div class='f_r_top'>
+	               <ul class='f_c_t_left'>
+	                  <li>
+	                     <span>站点名称：</span>
+	                     <span>深圳便利店加盟|东莞威有有限公司加盟|伟哥加q2309485575</span>
+	                     <button class='btn btn-success'><span class="glyphicon glyphicon-home"></span>
+	                     编辑
+	                     </button>
+	                  </li>
+	                  <li>
+	                    <span>站点地址：</span>
+	                    <a href="http://www.cnblogs.com/murenziwei">http://www.cnblogs.com/murenziwei</a>
+	                    <button class="btn-success btn">
+	                       <span class='glyphicon glyphicon-home'></span>
+	                       更换模板
+	                    </button>
+	                  </li>
+	                  <li>
+	                     <span>产品：</span>
+	                     <span>站在冷风中，无敌是多么寂寞【伟哥版】</span>
+	                  </li>
+	                  <li>
+	                     <span>域名：</span>
+	                     <a href="http://www.cnblogs.com/murenziwei">http://www.cnblogs.com/murenziwei <span class="glyphicon-superscript"></span></a>
+	                     <button class='btn btn-success discountP'><span class='glyphicon glyphicon-usd'></span>注册域名 <img src="pic/indexPic/discounts.png" class='discount_png' alt=""></button>
+	                  </li>
+	               </ul>
+	               <ul class='f_c_t_right'>
+	                  <li>
+	                     <img src="pic/indexPic/pc-thum@2x.png" alt="PC网站" name='pc_thum'>
+	                     <button class='btn btn-success' data-toggle='tooltip' title='点击设计PC网站' data-placement='bottom'>
+	                        <span class='glyphicon glyphicon-sunglasses'></span>
+	                        PC
+	                     </button>
+	                  </li>
+	                  <li>
+	                     <img src="pic/indexPic/mobile-thum@2x.png" alt="手机网站" name='mobile_thum'>
+	                     <button class='btn btn-success' data-toggle='tooltip' title='点击设计手机网站' data-placement='bottom'>
+	                        <span class='glyphicon glyphicon-sunglasses'></span>
+	                        手机
+	                     </button>
+	                  </li>
+	                  <li>
+	                     <img src="pic/indexPic/minipro-thum@2x.png" alt="小程序" name='minipro_thum'>
+	                     <button class='btn btn-success' data-toggle='tooltip' title='点击设计小程序' data-placement='bottom'>
+	                        <span class='glyphicon glyphicon-sunglasses'></span>
+	                        小程序
+	                     </button>
+	                  </li>
+	               </ul>
+			   </div>
+			   <div class='f_r_center'>
+			      <h5 class='f_r_c_title'>网站管理</h5>
+			      <ul class='f_r_c_content'>
+                    <li>
+                       <span class='hover_show'>$</span>
+                       <a href="#">
+						  <dt>
+	                          <span class='glyphicon glyphicon-home'></span>
+	                          <span>文章</span>
+	                          
+	                      </dt>
+	                      <dd>16</dd>
+                       </a>
+                    </li>
+                    <li>
+                       <span class='hover_show'>$</span>
+                       <a href="#">
+						  <dt>
+	                          <span class='glyphicon glyphicon-home'></span>
+	                          <span>文章</span>
+	                          
+	                      </dt>
+	                      <dd>16</dd>
+                       </a>
+                    </li>
+                    <li>
+                       <span class='hover_show'>$</span>
+                       <a href="#">
+						  <dt>
+	                          <span class='glyphicon glyphicon-home'></span>
+	                          <span>文章</span>
+	                          
+	                      </dt>
+	                      <dd>16</dd>
+                       </a>
+                    </li>
+                    <li>
+                       <span class='hover_show'>$</span>
+                       <a href="#">
+						  <dt>
+	                          <span class='glyphicon glyphicon-home'></span>
+	                          <span>文章</span>
+	                          
+	                      </dt>
+	                      <dd>16</dd>
+                       </a>
+                    </li>
+                    <li>
+                       <span class='hover_show'>$</span>
+                       <a href="#">
+						  <dt>
+	                          <span class='glyphicon glyphicon-home'></span>
+	                          <span>文章</span>
+	                          
+	                      </dt>
+	                      <dd>16</dd>
+                       </a>
+                    </li>
+                    <li>
+                       <span class='hover_show'>$</span>
+                       <a href="#">
+						  <dt>
+	                          <span class='glyphicon glyphicon-home'></span>
+	                          <span>文章</span>
+	                          
+	                      </dt>
+	                      <dd>16</dd>
+                       </a>
+                    </li>
+                     <li>
+                       <span class='hover_show'>$</span>
+                       <a href="#">
+						  <dt>
+	                          <span class='glyphicon glyphicon-home'></span>
+	                          <span>文章</span>
+	                          
+	                      </dt>
+	                      <dd>16</dd>
+                       </a>
+                    </li>
+			      </ul>
+			   </div>
+			   <div class='f_r_bottom'>
+			      <div class='frb_left'>
+			         <a href="#" class='f_l_pv'>
+			           <span></span>
+			           PV
+			         </a>
+			         <a href="#" class='f_l_ip'>
+			           <span></span>
+			           IP
+			         </a>
+			         <h5>近7日流量统计</h5>
+			         <div id='f_l_canvas'>
+                        <canvas id='f_l_c_One' width=500 height=260 ></canvas>
+                        
+			         </div>
+			      </div>
+			      <div class='frb_right'>
+			         <a href="#" class='f_new'>更新></a>
+			         <h5>版本更新</h5>
+			         <ul class='frb_r_ul'>
+			            <li>
+			               <ul>
+			                  <li>2017-03-03</li>
+			                  <li>2017-03-03</li>
+			                  <li>2017-03-03</li>
+			                  <li>2017-03-03</li>
+			                  <li>2017-03-03</li>
+			                  <li>2017-03-03</li>
+			               </ul>
+			            </li>
+			            <li class='empty_li'>
+			               <hr>
+			               <ul>
+			                  <li></li>
+			                  <li></li>
+			                  <li></li>
+			                  <li></li>
+			                  <li></li>
+			                  <li></li>
+			               </ul>
+			            </li>
+			            <li>
+			               <ul class='hover_control'>
+			                  <li ><div class='square'></div><a href="#">产品功能升级</a></li>
+			                  <li><div class='square'></div><a href="#">产品功能升级</a></li>
+			                  <li><div class='square'></div><a href="#">产品功能升级</a></li>
+			                  <li ><div class='square'></div><a href="#">产品功能升级</a></li>
+			                  <li><div class='square'></div><a href="#">产品功能升级</a></li>
+			                  <li><div class='square'></div><a href="#">产品功能升级</a></li>
+			               </ul>
+			            </li>
+			         </ul>
+			      </div>
+			   </div>
+          </div>
+        </section>
+    	<script src="javascript/jquery.js"></script>
+    	<script src="javascript/bootstrap.js"></script>
+    	<script src="javascript/Chart.min.js"></script>
+    	<script src="javascript/all.js"></script>
+    	<script src="javascript/indexCanvas.js"></script>
+    </body>
+</html>

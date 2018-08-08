@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<title>新增成员</title>
+<desc>Created with Sketch.</desc>
+<g id="Group-21" transform="translate(2.000000, 2.000000)">
+	<g id="XMLID_1_">
+		<g>
+			<path fill="#609EE9" d="M12.5,6C12.78,6,13,6.22,13,6.5C13,6.78,12.78,7,12.5,7H7V6H12.5z"/>
+			<path fill="#609EE9" d="M7,7v5.5C7,12.78,6.78,13,6.5,13C6.22,13,6,12.78,6,12.5V7H7z"/>
+			<rect x="6" y="6" fill="#609EE9" width="1" height="1"/>
+			<path fill="#609EE9" d="M7,0.5V6H6V0.5C6,0.22,6.22,0,6.5,0C6.78,0,7,0.22,7,0.5z"/>
+			<path fill="#609EE9" d="M6,6v1H0.5C0.22,7,0,6.78,0,6.5C0,6.22,0.22,6,0.5,6H6z"/>
+		</g>
+		<g>
+		</g>
+	</g>
+</g>
+</svg>

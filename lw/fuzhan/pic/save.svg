@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>保存</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="站点信息" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(-1334.000000, -112.000000)" id="蓝色按钮中" stroke="#609EE9">
+            <g transform="translate(1317.000000, 102.000000)">
+                <g id="保存" transform="translate(16.000000, 9.000000)">
+                    <g id="Group">
+                        <path d="M14.5363636,6.70909091 C14.6636364,7.21818182 14.7272727,7.79090909 14.7272727,8.36363636 C14.7272727,11.8636364 11.8636364,14.7272727 8.36363636,14.7272727 C4.86363636,14.7272727 2,11.8636364 2,8.36363636 C2,4.86363636 4.86363636,2 8.36363636,2 C9.57272727,2 10.7181818,2.31818182 11.7363636,2.95454545" id="Shape"></path>
+                        <polyline id="Shape" points="5.81818182 7.09090909 8.36363636 9.63636364 15.3636364 2.63636364"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

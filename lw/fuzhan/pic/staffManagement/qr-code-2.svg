@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>二维码</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="8" height="8" rx="1"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8" height="8" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="0" y="10" width="8" height="8" rx="1"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8" height="8" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="10" y="0" width="8" height="8" rx="1"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8" height="8" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="通讯录管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1401.000000, -13.000000)" id="头部">
+            <g>
+                <g id="二维码">
+                    <g>
+                        <g transform="translate(1401.000000, 13.000000)">
+                            <g id="Group-10" transform="translate(3.000000, 3.000000)">
+                                <use id="Rectangle-12" stroke="#609ee9" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                                <use id="Rectangle-12" stroke="#609ee9" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
+                                <path d="M13,15 L13,14 L12,14 L12,18 L13,18 L13,16 L18,16 L18,15 L13,15 Z M10,10.9970301 C10,10.4463856 10.4530363,10 10.9970301,10 L17.0029699,10 C17.5536144,10 18,10.4530363 18,10.9970301 L18,17.0029699 C18,17.5536144 17.5469637,18 17.0029699,18 L10.9970301,18 C10.4463856,18 10,17.5469637 10,17.0029699 L10,10.9970301 Z M15,10 L16,10 L16,13 L15,13 L15,10 Z M15,16 L16,16 L16,18 L15,18 L15,16 Z" id="Combined-Shape" fill="#609ee9"></path>
+                                <use id="Rectangle-12" stroke="#609ee9" mask="url(#mask-6)" stroke-width="2" xlink:href="#path-5"></use>
+                                <circle id="Oval-2" fill="#609ee9" cx="4" cy="4" r="1"></circle>
+                                <circle id="Oval-2" fill="#609ee9" cx="4" cy="14" r="1"></circle>
+                                <circle id="Oval-2" fill="#609ee9" cx="14" cy="4" r="1"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

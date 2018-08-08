@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="120px" height="81px" viewBox="0 0 120 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="120" height="81" rx="5"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="120" height="81" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="5.04201681" y="16" width="110.92437" height="60" rx="3"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="110.92437" height="60" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index" transform="translate(-155.000000, -154.000000)">
+            <g id="内容" transform="translate(130.000000, 95.000000)">
+                <g id="Group-4" transform="translate(0.000000, 33.000000)">
+                    <g id="Group-3" transform="translate(25.000000, 26.000000)">
+                        <use id="Rectangle-7" stroke="#D2DAE8" mask="url(#mask-2)" stroke-width="2" fill="#E9F1FF" xlink:href="#path-1"></use>
+                        <use id="Rectangle-8" stroke="#D1D9E7" mask="url(#mask-4)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-3"></use>
+                        <rect id="Rectangle-10" fill="#E7F0FF" x="17.1428571" y="26" width="47.394958" height="38" rx="3"></rect>
+                        <rect id="Rectangle-9" fill="#E9F1FF" x="74.6218487" y="26" width="14.1176471" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle-9" fill="#E9F1FF" x="74.6218487" y="33" width="33.2773109" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle-9" fill="#E9F1FF" x="74.6218487" y="40" width="33.2773109" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle-9" fill="#E9F1FF" x="74.6218487" y="47" width="33.2773109" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle-9" fill="#E9F1FF" x="74.6218487" y="54" width="33.2773109" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle-9" fill="#E9F1FF" x="74.6218487" y="61" width="33.2773109" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle-9" fill="#E9F1FF" x="93.7815126" y="26" width="14.1176471" height="3" rx="1.5"></rect>
+                        <ellipse id="Oval-3" fill="#FF283F" cx="9.07563025" cy="8" rx="2.5210084" ry="2.5"></ellipse>
+                        <ellipse id="Oval-3" fill="#FFBB00" cx="18.1512605" cy="8" rx="2.5210084" ry="2.5"></ellipse>
+                        <ellipse id="Oval-3" fill="#00D842" cx="26.7226891" cy="8" rx="2.5210084" ry="2.5"></ellipse>
+                        <polygon id="Path-2" fill="#FFFFFF" points="20.6676528 59.9554443 60.4735972 59.980957 60.4735972 50.3592158 49.1754202 43.3574219 38.8722755 52.9492188 30.087152 47.4824219 20.6910411 53.5249023"></polygon>
+                        <ellipse id="Oval-4" fill="#FFFFFF" cx="35.2941176" cy="39" rx="3.02521008" ry="3"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
