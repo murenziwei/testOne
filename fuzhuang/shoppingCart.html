@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)/e/ShopSys/buycar/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>威有</title>
+    <!-- <title>购物车</title>
+    <meta name="keywords" content="[e:loop={&#39;select sitekey from pc_enewspublic&#39;,1,24,0}][/e:loop],[!--pagekey--]">
+    <meta name="description" content="[e:loop={&#39;select siteintro from pc_enewspublic&#39;,1,24,0}][/e:loop]"> -->
+    <link href="./css/_LiYiAS.css" rel="stylesheet">
+    <script src="./js/jquery1.42.min.js"></script>
+    <script src="./购物车_files/jquery.SuperSlide.2.1.1.js"></script>
+    <!-- <script src="/i/LYHome.js"></script> -->
+    <!-- 语言转换 -->
+    <script type='text/javascript'>setTimeout(function () { { var s = document.createElement('script'); s.type = 'text/javascript'; s.charset = 'UTF-8'; s.src = ((location && location.href && location.href.indexOf('https') == 0) ? 'https://ssl.microsofttranslator.com' : 'http://www.microsofttranslator.com') + '/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=True&ui=true&settings=Manual&from='; var p = document.getElementsByTagName('head')[0] || document.documentElement; p.insertBefore(s, p.firstChild); } }, 0);</script>
+    <style>
+        a                       { text-decoration: none; color: #002280 }
+        a:hover                 { text-decoration: underline }
+        body                    { font-size: 9pt; }
+        table                   { font: 9pt Tahoma, Verdana; color: #000000 }
+        input,select,textarea   { font: 9pt Tahoma, Verdana; font-weight: normal; }
+        select                  { font: 9pt Tahoma, Verdana; font-weight: normal; }
+        .category               { font: 9pt Tahoma, Verdana; color: #000000; background-color: #fcfcfc }
+        .singleborder           { font-size: 0px; line-height: 1px; padding: 0px; background-color: #F8F8F8 }
+        .bold                   { font-weight: bold }
+        /*修改主要色调*/
+        .header{ font: 9pt Tahoma, Verdana; color: #FFFFFF; font-weight: bold; background-color:none; }
+        .header a               { color: #FFFFFF }
+        .tableborder{ margin-left:20px; margin-top:20px;}
+        .header td{ color:#444;}
+
+
+        /*分页样式*/
+        .epages{margin:3px 0;font:11px/12px Tahoma}
+        .epages *{vertical-align:middle;}
+        .epages a{padding:1px 4px 1px;border:1px solid #A6CBE7;margin:0 1px 0 0;text-align:center;text-decoration:none;font:normal 12px/14px verdana;}
+        .epages a:hover{border:#659B28 1px solid;background:#f3f8ef;text-decoration:none;color:#004c7d}
+        .epages input{margin-bottom:0px;border:1px solid #659B28;height:15px;font:bold 12px/15px Verdana;padding-bottom:1px;padding-left:1px;margin-right:1px;color:#659B28;}
+    </style>
+    <script>
+        function DisplayImg(ss,imgname,phome){
+            if(imgname=="menumemberimg")
+            {
+                img=todisplay(domenumember,phome);
+                document.images.menumemberimg.src=img;
+            }
+            else if(imgname=="menumsgimg")
+            {
+                img=todisplay(domenumsg,phome);
+                document.images.menumsgimg.src=img;
+            }
+            else if(imgname=="menuinfoimg")
+            {
+                img=todisplay(domenuinfo,phome);
+                document.images.menuinfoimg.src=img;
+            }
+            else if(imgname=="menuspaceimg")
+            {
+                img=todisplay(domenuspace,phome);
+                document.images.menuspaceimg.src=img;
+            }
+            else if(imgname=="menupayimg")
+            {
+                img=todisplay(domenupay,phome);
+                document.images.menupayimg.src=img;
+            }
+            else if(imgname=="menushopimg")
+            {
+                img=todisplay(domenushop,phome);
+                document.images.menushopimg.src=img;
+            }
+            else
+            {}
+            DisplayAllMenu(imgname);
+        }
+
+        function todisplay(ss,phome){
+            if(ss.style.display=="")
+            {
+                ss.style.display="none";
+                theimg="/skin/member/images/add.gif";
+            }
+            else
+            {
+                ss.style.display="";
+                theimg="/skin/member/images/noadd.gif";
+            }
+            return theimg;
+        }
+
+        function turnit(ss,img){
+            DisplayImg(ss,img,0);
+        }
+
+        function DisplayAllMenu(imgname){
+            if(imgname!='menumemberimg'&&domenumember.style.display=="")
+            {
+                domenumember.style.display="none";
+                document.images.menumemberimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menumsgimg'&&domenumsg.style.display=="")
+            {
+                domenumsg.style.display="none";
+                document.images.menumsgimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menuinfoimg'&&domenuinfo.style.display=="")
+            {
+                domenuinfo.style.display="none";
+                document.images.menuinfoimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menuspaceimg'&&domenuspace.style.display=="")
+            {
+                domenuspace.style.display="none";
+                document.images.menuspaceimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menupayimg'&&domenupay.style.display=="")
+            {
+                domenupay.style.display="none";
+                document.images.menupayimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menushopimg'&&domenushop.style.display=="")
+            {
+                domenushop.style.display="none";
+                document.images.menushopimg.src="/skin/member/images/add.gif";
+            }
+        }
+    </script>
+</head>
+<body leftmargin="0" topmargin="0">
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+                <div class="Topl">
+                    <div class="Lasd">
+                        <div class="Fla">
+                            <span style="color: #ccc;">Hi&nbsp;<strong style=" color:#ff0000">13825000114</strong>&nbsp;欢迎来到礼壹网</span><a href="javascript:void(0)" onclick="return confirm(&#39;确认要退出?&#39;);">退出</a>
+                        </div>
+                        <div class="Ras">
+                            <div id="MicrosoftTranslatorWidget" class="Dark" style=" background-color: transparent;" translate="no" len="501"></div>
+                            <a href="homePage.html">网站首页</a><a>|</a>
+                            
+                            
+                            <a href="contactUs.html">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+    <style>
+	a.changefieldandcss {
+		color: #fb565c;
+	}
+</style>
+<div class="Log">
+	<div class="LMor">
+		<div class="LmImg">
+			<a href="/">
+				<img src="./购物车_files/as_05.jpg">
+			</a>
+		</div>
+
+		<div class="NasS">
+            <form name="search" action="/e/search/index.php" id="search" method="post">
+                <input name="show" value="title,smalltext,fenlei,intro,productno,pbrand" type="hidden">
+                <input type="hidden" name="classid" id="jq-classid" value="22">
+                <input type="hidden" name="tempid" id="jq-tid" value="2">
+                <div class="r">
+                    <input type="text" name="keyboard" placeholder="请输入礼品、商家搜索" class="nr">
+                  <input type="submit" value="搜索" class="submit_ipt">
+                </div>
+            </form>
+            <script type="text/javascript">
+                $("#goods").click(function() {
+                    var n = $(this).index();
+                    $("#jq-classid").val($(this).attr("data-cid"));
+                    $("#jq-tid").val($(this).attr("data-tid"));
+                });
+                $('.Jam a').click(function(){
+                    $(this).addClass('on').siblings().removeClass('on');
+                });
+                $('#search').submit(function(){
+                    if($('#company').hasClass('on')){
+                        window.location.href='/e/action/ListInfo.php?&mid=1&tempid=14&ph=1&company='+$('input[name=keyboard]').val();
+                        return false;
+                    }
+                });
+            </script>
+        </div>
+		<div class="dhhbmn"><img src="./购物车_files/fdgdtcc_03.png">&nbsp;&nbsp;&nbsp;13825000114</div>
+	</div>
+</div>
+<script>
+	$(".Mas")
+		.hover(function() {
+			$(this)
+				.find(".Make")
+				.show();
+			$(".ci-right")
+				.css("transform", "rotate(180deg)")
+
+		}, function() {
+			$(this)
+				.find(".Make")
+				.hide();
+			$(".ci-right")
+				.css("transform", "rotate(0deg)")
+
+		})
+</script>    <div class="grhybn"></div>
+    <div style=" width:1200px; margin:0 auto;font-size:20px; text-align:center; line-height:50px;">购物车   <a style="float:right;" href="/">首页</a></div>
+    <table width="1200" border="0" align="center" cellpadding="12" cellspacing="1" style="border-top:1px solid #eaeaeb">
+        <tbody><tr>
+            <td width="20%" valign="top" style=" border-right:1px solid #eaeaeb">
+                <div class="Menuboxa">
+                    <ul>
+                        <li><a href="会员中心.html">个人中心</a></li>
+                        <li><a href="修改资料.html">修改资料</a></li>
+                        <li><a href="修改密码.html">修改密码</a></li>
+                        <!-- <li><a href="/e/member/fava/">收藏的产品</a></li> -->
+                        <li><a href="购物车.html">我的购物车</a></li>
+                        <!-- <li><a href="/e/ShopSys/ListDd/?page=0&amp;show=5">我的订单</a></li>
+                        <li><a href="/e/ShopSys/Lpkdh/?page=0&amp;show=10">我的礼品卡</a></li>
+                         -->
+                        <li><a href="配送地址列表.html">收货地址</a></li>
+                        <!-- <li><a href="/e/ShopSys/wuliu/">物流查询</a></li> -->
+                       <!-- <li><a href="/e/ShopSys/ListDd/?personal=1&page=0&show=5&th=1">退货</a></li>-->
+                        <!-- <li><a href="/e/member/doaction.php?enews=exit" onclick="return confirm(&#39;确认要退出?&#39;);">退出</a></li> -->
+                    </ul>
+                                    </div>
+            </td>
+            <td width="80%" height="420" valign="top" bgcolor="#FFFFFF" style="position:relative;">
+<script src="./购物车_files/shop.js" charset="utf-8"></script>
+
+
+	<div style="margin-bottom:10px;border-bottom:2px solid #BBBCC8">
+		<span style="margin-right:520px">商品信息</span>
+		<span style="margin-right:50px">单价</span>
+		<span style="margin-right:100px">数量</span>
+		<span style="margin-right:45px">金额</span>
+		<span>操作</span>
+	</div>
+<div>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div class="mystyle">
+            <div id="Buycar_show" style="width:100%">
+ <div>
+   <span>店铺：</span><span>浙江圆创科技有限公司</span>
+ </div>
+<!-- ////////////////////购物车信息////////////你需要修改的区域///////////////////////// -->
+    <div style="border:1px solid #83C2C2;padding:10px;">
+      <div style="overflow:hidden;">
+        <!-- 选择 -->
+        <input style="float:left" type="checkbox" name="BuycarChoose" value="4326">
+        <!-- 图片 -->
+        <img style="float:left;margin-right:10px" src="./购物车_files/c2b28b8ae783b610676ab7f93ccb39dc.jpg" width="75px" height="75px" alt="">
+        <!-- 商品名称 -->
+        <span style="font-size:12px;float:left;display:inline-block;width:200px;margin-right:10px">
+          <a target="_blank" href="/e/action/ShowInfo.php?classid=83&amp;id=3741">厂家批发环办公文具三件套BG-A003桌面裁纸滚刀推夹订书针</a>
+        </span>
+        <!-- 商品规格 -->
+        <span style="float:left;font-size:12px;">规格类型：</span>
+         <div style="height:80px;float:left;text-align:center">
+                                                <img style="width:50px;height:50px;" src="./购物车_files/getimg.php" alt="">
+                                <p style="width: 50px; font-size: 10px; word-break: break-all; white-space: nowrap;">
+                  图片色|办公文具三件套（滚刀+推夹+推夹盒）                </p>
+        </div>
+        <!-- 定制信息 -->
+        <span style="float:left;margin-left:10px;font-size:12px;">定制信息：</span>
+        <div style="float:left;font-size:12px;width:60px" class="divimg" price="301">
+            无        </div>
+        <!-- 单价 -->
+        <div style="float:left;margin-left:10px;font-weight:600;width:75px">
+          <p style="color:#4D9F9C"><s>￥52.00</s></p>
+          <p>￥27.00</p>
+        </div>
+        <!-- 数量 -->
+        <div style="float:left;margin-left:10px">
+          <button class="subnum MQas1" style="background-color:#D5E7E1;height:25px;float: left;width: 30px; text-align: center;border:0px;" buycarid="4326" id="3741" classid="83">-</button>
+          <span class="buynum Mqases" buycarid="4326" id="3741" classid="83">1</span>
+          <button class="addnum MQas2" style="background-color:#D5E7E1;height:25px;float: left; display: block;width: 30px; text-align: center;border:0px;" buycarid="4326" id="3741" classid="83">+</button>
+        </div>
+        <!-- 金额 -->
+                <span style="color:#9C692D;float:left;font-weight:600;margin-left:15px;width:80px">￥27.00</span>
+        <!-- 操作 -->
+        <button style="float:left;margin-left:0px;" onclick="DeleteOneBuyCar(4326)" type="button" name="button">删除</button>
+      </div>
+      <!-- 留言 -->
+      <div tyle="float:left;">
+          <span style="color:#A89C9B">留言：<span></span></span>
+      </div>
+    </div>
+<!-- ////////////////////////////////////购物车信息///////////////////////////////////// -->
+<!-- ////////////////////购物车信息////////////你需要修改的区域///////////////////////// -->
+    <div style="border:1px solid #83C2C2;padding:10px;">
+      <div style="overflow:hidden;">
+        <!-- 选择 -->
+        <input style="float:left" type="checkbox" name="BuycarChoose" value="4325">
+        <!-- 图片 -->
+        <img style="float:left;margin-right:10px" src="./购物车_files/18c8be774ede3a9495bafd0ae233f772.jpg" width="75px" height="75px" alt="">
+        <!-- 商品名称 -->
+        <span style="font-size:12px;float:left;display:inline-block;width:200px;margin-right:10px">
+          <a target="_blank" href="/e/action/ShowInfo.php?classid=24&amp;id=3670">新品厂家直销SZ12卡通多功能创意开罐器万能开瓶器简易开罐头啤酒喵小姐瓶罐启</a>
+        </span>
+        <!-- 商品规格 -->
+        <span style="float:left;font-size:12px;">规格类型：</span>
+         <div style="height:80px;float:left;text-align:center">
+                                                <img style="width:50px;height:50px;" src="./购物车_files/getimg(1).php" alt="">
+                                <p style="width: 50px; font-size: 10px; word-break: break-all; white-space: nowrap;">
+                  绿色|195.0mmX138.0mmX50.0mm                </p>
+        </div>
+        <!-- 定制信息 -->
+        <span style="float:left;margin-left:10px;font-size:12px;">定制信息：</span>
+        <div style="float:left;font-size:12px;width:60px" class="divimg" price="301">
+            无        </div>
+        <!-- 单价 -->
+        <div style="float:left;margin-left:10px;font-weight:600;width:75px">
+          <p style="color:#4D9F9C"><s>￥48.00</s></p>
+          <p>￥25.00</p>
+        </div>
+        <!-- 数量 -->
+        <div style="float:left;margin-left:10px">
+          <button class="subnum MQas1" style="background-color:#D5E7E1;height:25px;float: left;width: 30px; text-align: center;border:0px;" buycarid="4325" id="3670" classid="24">-</button>
+          <span class="buynum Mqases" buycarid="4325" id="3670" classid="24">1</span>
+          <button class="addnum MQas2" style="background-color:#D5E7E1;height:25px;float: left; display: block;width: 30px; text-align: center;border:0px;" buycarid="4325" id="3670" classid="24">+</button>
+        </div>
+        <!-- 金额 -->
+                <span style="color:#9C692D;float:left;font-weight:600;margin-left:15px;width:80px">￥25.00</span>
+        <!-- 操作 -->
+        <button style="float:left;margin-left:0px;" onclick="DeleteOneBuyCar(4325)" type="button" name="button">删除</button>
+      </div>
+      <!-- 留言 -->
+      <div tyle="float:left;">
+          <span style="color:#A89C9B">留言：<span></span></span>
+      </div>
+    </div>
+<!-- ////////////////////////////////////购物车信息///////////////////////////////////// -->
+ <div>
+   <span>店铺：</span><span>昆山仟泓贸易有限公司</span>
+ </div>
+<!-- ////////////////////购物车信息////////////你需要修改的区域///////////////////////// -->
+    <div style="border:1px solid #83C2C2;padding:10px;">
+      <div style="overflow:hidden;">
+        <!-- 选择 -->
+        <input style="float:left" type="checkbox" name="BuycarChoose" value="4323">
+        <!-- 图片 -->
+        <img style="float:left;margin-right:10px" src="./购物车_files/fc5923d1ca8679b852b36cab8c21b105.jpg" width="75px" height="75px" alt="">
+        <!-- 商品名称 -->
+        <span style="font-size:12px;float:left;display:inline-block;width:200px;margin-right:10px">
+          <a target="_blank" href="/e/action/ShowInfo.php?classid=90&amp;id=3629">台湾强生女性美腿机JS-120 多功能家用健腹健身器材贝壳机厂家直销</a>
+        </span>
+        <!-- 商品规格 -->
+        <span style="float:left;font-size:12px;">规格类型：</span>
+         <div style="height:80px;float:left;text-align:center">
+                                                <img style="width:50px;height:50px;" src="./购物车_files/getimg(2).php" alt="">
+                                <p style="width: 50px; font-size: 10px; word-break: break-all; white-space: nowrap;">
+                  粉红色|275*220*165MM                </p>
+        </div>
+        <!-- 定制信息 -->
+        <span style="float:left;margin-left:10px;font-size:12px;">定制信息：</span>
+        <div style="float:left;font-size:12px;width:60px" class="divimg" price="0">
+            无        </div>
+        <!-- 单价 -->
+        <div style="float:left;margin-left:10px;font-weight:600;width:75px">
+          <p style="color:#4D9F9C"><s>￥213.00</s></p>
+          <p>￥111.00</p>
+        </div>
+        <!-- 数量 -->
+        <div style="float:left;margin-left:10px">
+          <button class="subnum MQas1" style="background-color:#D5E7E1;height:25px;float: left;width: 30px; text-align: center;border:0px;" buycarid="4323" id="3629" classid="90">-</button>
+          <span class="buynum Mqases" buycarid="4323" id="3629" classid="90">1</span>
+          <button class="addnum MQas2" style="background-color:#D5E7E1;height:25px;float: left; display: block;width: 30px; text-align: center;border:0px;" buycarid="4323" id="3629" classid="90">+</button>
+        </div>
+        <!-- 金额 -->
+                <span style="color:#9C692D;float:left;font-weight:600;margin-left:15px;width:80px">￥111.00</span>
+        <!-- 操作 -->
+        <button style="float:left;margin-left:0px;" onclick="DeleteOneBuyCar(4323)" type="button" name="button">删除</button>
+      </div>
+      <!-- 留言 -->
+      <div tyle="float:left;">
+          <span style="color:#A89C9B">留言：<span></span></span>
+      </div>
+    </div>
+<!-- ////////////////////////////////////购物车信息///////////////////////////////////// -->
+<!-- ////////////////////购物车信息////////////你需要修改的区域///////////////////////// -->
+    <div style="border:1px solid #83C2C2;padding:10px;">
+      <div style="overflow:hidden;">
+        <!-- 选择 -->
+        <input style="float:left" type="checkbox" name="BuycarChoose" value="4322">
+        <!-- 图片 -->
+        <img style="float:left;margin-right:10px" src="./购物车_files/fc5923d1ca8679b852b36cab8c21b105.jpg" width="75px" height="75px" alt="">
+        <!-- 商品名称 -->
+        <span style="font-size:12px;float:left;display:inline-block;width:200px;margin-right:10px">
+          <a target="_blank" href="/e/action/ShowInfo.php?classid=90&amp;id=3629">台湾强生女性美腿机JS-120 多功能家用健腹健身器材贝壳机厂家直销</a>
+        </span>
+        <!-- 商品规格 -->
+        <span style="float:left;font-size:12px;">规格类型：</span>
+         <div style="height:80px;float:left;text-align:center">
+                                                <img style="width:50px;height:50px;" src="./购物车_files/getimg(2).php" alt="">
+                                <p style="width: 50px; font-size: 10px; word-break: break-all; white-space: nowrap;">
+                  粉红色|275*220*165MM                </p>
+        </div>
+        <!-- 定制信息 -->
+        <span style="float:left;margin-left:10px;font-size:12px;">定制信息：</span>
+        <div style="float:left;font-size:12px;width:60px" class="divimg" price="0">
+            无        </div>
+        <!-- 单价 -->
+        <div style="float:left;margin-left:10px;font-weight:600;width:75px">
+          <p style="color:#4D9F9C"><s>￥213.00</s></p>
+          <p>￥111.00</p>
+        </div>
+        <!-- 数量 -->
+        <div style="float:left;margin-left:10px">
+          <button class="subnum MQas1" style="background-color:#D5E7E1;height:25px;float: left;width: 30px; text-align: center;border:0px;" buycarid="4322" id="3629" classid="90">-</button>
+          <span class="buynum Mqases" buycarid="4322" id="3629" classid="90">1</span>
+          <button class="addnum MQas2" style="background-color:#D5E7E1;height:25px;float: left; display: block;width: 30px; text-align: center;border:0px;" buycarid="4322" id="3629" classid="90">+</button>
+        </div>
+        <!-- 金额 -->
+                <span style="color:#9C692D;float:left;font-weight:600;margin-left:15px;width:80px">￥111.00</span>
+        <!-- 操作 -->
+        <button style="float:left;margin-left:0px;" onclick="DeleteOneBuyCar(4322)" type="button" name="button">删除</button>
+      </div>
+      <!-- 留言 -->
+      <div tyle="float:left;">
+          <span style="color:#A89C9B">留言：<span></span></span>
+      </div>
+    </div>
+<!-- ////////////////////////////////////购物车信息///////////////////////////////////// -->
+ <div>
+   <span>店铺：</span><span>深圳市东方韵实业有限公司</span>
+ </div>
+<!-- ////////////////////购物车信息////////////你需要修改的区域///////////////////////// -->
+    <div style="border:1px solid #83C2C2;padding:10px;">
+      <div style="overflow:hidden;">
+        <!-- 选择 -->
+        <input style="float:left" type="checkbox" name="BuycarChoose" value="4321">
+        <!-- 图片 -->
+        <img style="float:left;margin-right:10px" src="./购物车_files/75e1a3f075d54219ffc2078323b5f8aa.jpg" width="75px" height="75px" alt="">
+        <!-- 商品名称 -->
+        <span style="font-size:12px;float:left;display:inline-block;width:200px;margin-right:10px">
+          <a target="_blank" href="/e/action/ShowInfo.php?classid=80&amp;id=2466">精品黑檀</a>
+        </span>
+        <!-- 商品规格 -->
+        <span style="float:left;font-size:12px;">规格类型：</span>
+         <div style="height:80px;float:left;text-align:center">
+                                                <img style="width:50px;height:50px;" src="./购物车_files/getimg(3).php" alt="">
+                                <p style="width: 50px; font-size: 10px; word-break: break-all; white-space: nowrap;">
+                  三件套|黑檀名片盒+黑檀U盘(16g)+笔                </p>
+        </div>
+        <!-- 定制信息 -->
+        <span style="float:left;margin-left:10px;font-size:12px;">定制信息：</span>
+        <div style="float:left;font-size:12px;width:60px" class="divimg" price="151">
+            无        </div>
+        <!-- 单价 -->
+        <div style="float:left;margin-left:10px;font-weight:600;width:75px">
+          <p style="color:#4D9F9C"><s>￥240.00</s></p>
+          <p>￥125.00</p>
+        </div>
+        <!-- 数量 -->
+        <div style="float:left;margin-left:10px">
+          <button class="subnum MQas1" style="background-color:#D5E7E1;height:25px;float: left;width: 30px; text-align: center;border:0px;" buycarid="4321" id="2466" classid="80">-</button>
+          <span class="buynum Mqases" buycarid="4321" id="2466" classid="80">1</span>
+          <button class="addnum MQas2" style="background-color:#D5E7E1;height:25px;float: left; display: block;width: 30px; text-align: center;border:0px;" buycarid="4321" id="2466" classid="80">+</button>
+        </div>
+        <!-- 金额 -->
+                <span style="color:#9C692D;float:left;font-weight:600;margin-left:15px;width:80px">￥125.00</span>
+        <!-- 操作 -->
+        <button style="float:left;margin-left:0px;" onclick="DeleteOneBuyCar(4321)" type="button" name="button">删除</button>
+      </div>
+      <!-- 留言 -->
+      <div tyle="float:left;">
+          <span style="color:#A89C9B">留言：<span></span></span>
+      </div>
+    </div>
+<!-- ////////////////////////////////////购物车信息///////////////////////////////////// -->
+</div>
+            <script type="text/javascript">
+                //读取购物车信息
+                $(document).ready(function() {
+                    getBuycar_show(function(value) {
+											if($.trim(value)!="")
+                        $("#Buycar_show").html(value);
+												else
+												alert("购物车没有数据");
+                    });
+                });
+            </script>
+        </div>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div style="height:36px;background-color:#F0E5E5">
+            <div style="margin-left:10px;display:inline-block;line-height:30px">
+                    <span>全选</span><input id="selectAll" type="checkbox" name="" value="">
+                    <script type="text/javascript">
+                        //全选
+                        $(document).ready(function() {
+                            $("#selectAll").click(function() {
+                                if ($(this).attr("checked")) {
+                                    $('[name="BuycarChoose"]').attr("checked", true);
+                                } else
+                                    $('[name="BuycarChoose"]').attr("checked", false);
+                            });
+                        });
+                    </script>
+            </div>
+
+            <div style="display:inline-block;margin-left:625px">
+                    <button style="border:0;margin:0;padding:0;width: 120px;height: 36px;color: #fff;text-align: center;line-height: 36px;background: #739C68;" id="DeleteBuyCar" type="button" name="button">删除</button>
+                    <script type="text/javascript">
+                        //删除
+                        $(document).ready(function() {
+                            $("#DeleteBuyCar").click(function() {
+															if(confirm("确认删除?"))
+                                DeleteBuyCar(function() {
+                                    //删除后重新加载购物车
+                                    getBuycar_show(function(value) {
+                                        $("#Buycar_show").html(value);
+                                    });
+                                });
+                            });
+                        });
+                    </script>
+            </div>
+
+            <div style="display:inline-block;">
+                    <button style="border:0;margin:0;padding:0;width: 120px;height: 36px;color: #fff;text-align: center;line-height: 36px;background: #fb565c;" id="BuyCarAccount" type="button" name="button">结算</button>
+					<script type="text/javascript">
+							//结算
+							$(document).ready(function() {
+									$("#BuyCarAccount").click(function() {
+										BuyCarAccount();
+									});
+							});
+					</script>
+            </div>
+        </div>
+    </div>
+</td></tr></tbody></table>
+<!-- <div class="sliocdqbox yqlj">
+<a>工厂直销</a><a>正品保证</a><a>中国电子商务协会会员单位</a><a>专注礼业</a><a>支付保障</a>
+</div> -->
+<div class="hbxian"></div>
+<div style="width: 100%;overflow: hidden;">
+	<div style="width: 1200px; margin: 0 auto;" class="Lqsue">
+		<div style="width: 100%; height: 40px;"></div>
+		<ul class="MqeUl" style="width: 130px;margin-left: 30px;">
+			<li id="Mqeds">全部商品分类</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=83" target="_blank">办公</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=58" target="_blank">数码</a>
+			</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=25" target="_blank">家居</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=26" target="_blank">家纺</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=24" target="_blank">厨具</a>
+			</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=63" target="_blank">服饰</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=60" target="_blank">箱包皮具</a>
+			</li>
+			
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=79" target="_blank">商务</a>
+			</li>
+		</ul>
+		
+		<ul class="MqeUl" style="width:140px;">
+              <li id="Mqeds">帮助中心</li>
+              <li><a href="contactUs.html">联系我们</a> </li>
+        </ul>
+		
+	</div>
+</div>
+<div style="width:100%; height: 40px; border-bottom: 1px solid #d5d6d8;"></div>
+<div style="width:100%; height: 30px;"></div>
+<div style="width: 1200px; margin: 0 auto; text-align: center; line-height: 25px;" class="Mqesdre">
+	
+	<p>静态页面开发者：李伟</p>
+	
+	
+
+
+<iframe frameborder="0" style="margin:0 auto;" height="90" width="90" allowtransparency="true" scrolling="no" src="./购物车_files/gshdimg.html" rel="nofollow"></iframe>
+<a href="http://www.cqgseb.cn/ztgsgl/WebSiteMonitoring/WebUI/XFWQ/Index.aspx?xh=313" target="_blank"><img src="./购物车_files/wqz.png" height="90" rel="nofollow"></a>
+</div>																																																																																																<div id="PcIndicate"></div>
+<div style="width:100%; height: 20px;"></div>
+<div class="fdright">
+    <ul>
+        <li onclick="GoBuycar()" class=""><b style="position:relative;"><img src="./img/fdgfbax_03.png"></b><span>购物车</span>
+            <div id="gwcjs"></div>
+        </li>
+        <li class="">
+            <a onclick="lxkfu()"><b><img src="./img/ikeezc.jpg" style=" width:30px; margin-top:-15px;"></b><span>联系客服</span></a>
+        </li>
+
+       
+
+        <li>
+          <a target="_blank" href="javascript:void(0)" onclick="$('html,body').stop().animate({'scrollTop':'0'})">
+            <b><img src="./img/fdgfbax_18.png" style="margin-left: -7px;margin-top: -7px;"></b><span>置顶</span>
+        </a></li>
+    </ul>
+</div>
+<script>
+  $(".fdright ul li").hover(function(){
+	$(this).addClass("on");
+	
+	},function(){
+		$(this).removeClass("on");
+		});
+  
+  
+</script>
+  <script>
+    /*解除语言翻译拖动的功能*/
+    window.onload=function(){
+        setTimeout(function(){document.getElementById("LauncherTranslatePhrase").onclick=function(){
+            document.getElementById("WidgetFloaterPanels").onmousedown=null;
+        };},100);
+        
+    }
+  </script>
+</body></html>

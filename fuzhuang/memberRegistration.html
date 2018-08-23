@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)/e/member/register/ChangeRegister.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <!-- <title>会员注册</title> -->
+  <title>威有</title>
+  <!-- <meta name="keywords" content="[e:loop={&#39;select sitekey from pc_enewspublic&#39;,1,24,0}][/e:loop],[!--pagekey--]">
+  <meta name="description" content="[e:loop={&#39;select siteintro from pc_enewspublic&#39;,1,24,0}][/e:loop]"> -->
+  <link href="./css/_LiYiAS.css" rel="stylesheet">
+  <script src="./会员注册_files/jquery1.42.min.js"></script>
+  <script src="./会员注册_files/jquery.SuperSlide.2.1.1.js"></script>
+  <script src="./会员注册_files/LYHome.js"></script>
+  <!-- 语言转换 -->
+  <script type='text/javascript'>setTimeout(function () { { var s = document.createElement('script'); s.type = 'text/javascript'; s.charset = 'UTF-8'; s.src = ((location && location.href && location.href.indexOf('https') == 0) ? 'https://ssl.microsofttranslator.com' : 'http://www.microsofttranslator.com') + '/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=True&ui=true&settings=Manual&from='; var p = document.getElementsByTagName('head')[0] || document.documentElement; p.insertBefore(s, p.firstChild); } }, 0);</script>
+  </head>
+  <body>
+    <div class="Topl">
+        <div class="Lasd">
+            <div class="Fla">
+                <span style="color: #ccc;">Hi游客,欢迎来到礼壹网</span>
+                 <a href="memberLogin.html">马上登录</a> | <a href="memberRegistration.html">注册帐号</a>
+               
+                
+            </div>
+            <div class="Ras">
+                <div id="MicrosoftTranslatorWidget" class="Dark" style=" background-color: transparent;" translate="no" len="501"></div>
+                <a href="homePage.html">网站首页</a><a>|</a>
+                
+                <a href="contactUs.html">联系我们</a>
+            </div>
+        </div>
+    </div>
+
+
+                      
+<style>
+	a.changefieldandcss {
+		color: #fb565c;
+	}
+</style>
+<div class="Log">
+	<div class="LMor">
+		<div class="LmImg">
+			<a href="/">
+				<img src="./会员注册_files/as_05.jpg">
+			</a>
+		</div>
+		<div class="NasS">
+            
+            <form name="search" action="/e/search/index.php" id="search" method="post">
+                <input name="show" value="title,smalltext,fenlei,intro,productno,pbrand" type="hidden">
+                <input type="hidden" name="classid" id="jq-classid" value="22">
+                <input type="hidden" name="tempid" id="jq-tid" value="2">
+                <div class="r">
+                    <input type="text" name="keyboard" placeholder="请输入礼品、商家搜索" class="nr">
+                  <input type="submit" value="搜索" class="submit_ipt">
+                </div>
+            </form>
+            <script type="text/javascript">
+                $("#goods").click(function() {
+                    var n = $(this).index();
+                    $("#jq-classid").val($(this).attr("data-cid"));
+                    $("#jq-tid").val($(this).attr("data-tid"));
+                });
+                $('.Jam a').click(function(){
+                    $(this).addClass('on').siblings().removeClass('on');
+                });
+                $('#search').submit(function(){
+                    if($('#company').hasClass('on')){
+                        window.location.href='/e/action/ListInfo.php?&mid=1&tempid=14&ph=1&company='+$('input[name=keyboard]').val();
+                        return false;
+                    }
+                });
+            </script>
+        </div>
+		<div class="dhhbmn"><img src="./会员注册_files/fdgdtcc_03.png">&nbsp;&nbsp;&nbsp;13825000114</div>
+	</div>
+</div>
+<script>
+	$(".Mas")
+		.hover(function() {
+			$(this)
+				.find(".Make")
+				.show();
+			$(".ci-right")
+				.css("transform", "rotate(180deg)")
+
+		}, function() {
+			$(this)
+				.find(".Make")
+				.hide();
+			$(".ci-right")
+				.css("transform", "rotate(0deg)")
+		})
+</script>              
+              <div class="zhuck">
+                <div class="zckz">
+                  <script type="text/javascript">
+                    $(function() {
+                      $('.zhuc p.select a').click(function() {
+                        $(this).addClass('hit').siblings().removeClass('hit');
+                        $('.panes>div:eq(' + $(this).index() + ')').show().siblings().hide();
+                      })
+                    })
+                  </script>
+                  <div class="hy">
+                    <dt>注册</dt>
+                    <p class="select"><a href="javascript:;" class="hit" id="vip">普通会员</a><a href="javascript:;" id="order">企业会员</a></p>
+                    <!--普通会员注册-->
+                    <div class="pane vip" style="display:block;">
+                      <form id="form-agency" method="post" enctype="multipart/form-data" action="/e/member/doaction.php">
+                        <input type="hidden" name="enews" value="register">
+                        <input name="groupid" type="hidden" id="groupid" value="1">
+                        <input name="tobind" type="hidden" id="tobind" value="0">
+
+                        <p class="ipt" style="display:none">
+                          <label>账号：</label><input name="username" type="text" id="username" maxlength="30">
+                        </p>
+                        <p class="ipt">
+                           <label>验证码：</label> <input name="mykey" type="text" id="mykey" size="6" style="width:80px;">
+                              <img src="./会员注册_files/saved_resource" name="loginKeyImg" id="loginKeyImg" onclick="loginKeyImg.src=&#39;../../ShowKey/?v=reg&amp;t=&#39;+Math.random()" title="看不清楚,点击刷新" style="width:80px;height: 30px;display: inline-block;float: right;">
+                        </p>
+                        <p class="ipt">
+                          <label>手机号：</label><input id="mycall" name="phone" style="width:100px" type="text" maxlength="30"><button style="width:90px;height:30px" onclick="getkey()" type="button" name="button">获取验证码</button>
+                        </p>
+                        <p class="ipt">
+                          <label>手机验证：</label><input name="key" type="text" id="key" size="6">
+                        </p>
+
+                        <p class="ipt">
+                          <label>密码：</label><input name="password" type="password" id="password" maxlength="20">
+                        </p>
+                        <p class="ipt">
+                          <label>重复密码：</label><input name="repassword" type="password" id="repassword" maxlength="20">
+                        </p>
+                        <!-- <p class="ipt">
+                                    <label>验证码：</label><input name="key" type="text" id="key" size="6" style="width:80px;"><img src="../../ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='../../ShowKey/?v=reg&amp;t='+Math.random()" title="看不清楚,点击刷新" style="width:80px;height: 34px;display: inline-block;float: right;">
+                                </p> -->
+                        <p class="btns">
+                          <input type="submit" name="Submit" onclick="return chksend()" value="注册" class="sub">
+                        </p>
+                        <p class="login-links"> <span style="font-size:12px; ">注册即同意</span> <a style="text-decoration:underline" onclick="showxieyi();" href="javascript:void(0)">注册协议</a> | <a href="javascript:;"> 已有账号？</a><a href="/e/member/login/">立即登陆</a></p>
+                        <script src="./会员注册_files/dialog.js"></script>
+
+                        <script type="text/javascript">
+
+
+
+
+                          function showxieyi() {
+                              var d = dialog({
+                                okValue: '确定',
+                                title: '注册协议',
+                                content: [' ',
+                                  ' <br> 本协议是您与礼壹网站（简称：本站，网址：www.liyinet.com  www.礼壹网.com )之间就礼壹网站服务等相关事宜所订立的契约，请您仔细阅读本注册协议，同意后再进行注册，本协议对双方具有同等的法律效力 ',
+                                  ' <br> ',
+                                  ' <br>1   本网站所有权和运营权归重庆壹陆捌电子商务有限公司所有。用户同意所有注册协议条款并完成注册程序才正式成为本站用户。认证用户与本网站在处理购物纠纷时应以本协议为依据，法律另有强制规定的依其规定。',
+                                  ' <br> ',
+                                  ' <br>2   未成年人在没有成年人监护下严禁注册使用本网站。',
+                                  ' <br> ',
+                                  ' <br>3   中华人民共和国境内能独立承担法律责任的公民可注册使用本网站，在中国境内的外国公民能独立承担法律责任的人士也可注册使用本网站。',
+                                  ' <br> ',
+                                  ' <br>4   本站所有注册用户自行准备上网设备及支付上网所产生的费用。',
+                                  ' <br> ',
+                                  ' <br>5   本站注册只须用户提供所有权或使用权手机号进行认证，一个号码只能注册一次，并由用户自己设置账号密码，所有用户信息本站予以严格保密，除非得到用户授权或法律规定的，本站不会对外泄露用户信息，用户下定单时应准确填写收件人地址、电话、邮箱等详细信息。如果用户所提供信息不合法、不真实、不准确、不详细的，由用户承担因此引起的责任及后果，并且礼壹网保留用户禁用本网站的各项权利和义务。',
+                                  ' <br> ',
+                                  ' <br>6   用户注册成功后，密码可根据用户需求进行更改，密码如有遗失可通过网络找回重置。用户发现账号和密码存在安全漏洞的情况下请及时与本站联系并向主管单位报案。',
+                                  ' <br> ',
+                                  ' <br>7   本网站用户享有获得网站及商家通过邮件、短信、公众号等发出的订单信息及促销活动的权利。',
+                                  ' <br> ',
+                                  ' <br>8   用户将自己的账号和密码给他人在本网站上使用造成的一切后果由用户和使用人共同承担。',
+                                  ' <br> ',
+                                  ' <br>9   用户不得在本网站传输或发表煽动、抗拒、破坏宪法和法律分裂国家，破坏国家统一的言论，禁止有民族仇恨，民族歧视，破坏民族团结的言论。',
+                                  ' <br> ',
+                                  ' <br>从中国大陆向境外传输资料信息时必须符合中国法律的规定。不得利用本网站从事一切违法犯罪活动。不得利用各种手段干扰网站的正常运行，不得侵入本站的各个系统，不得传输发表任何违法犯罪的、骚扰性、中伤他人、恐吓性、伤害性、淫秽、不文明的信息资料，不得教唆他人从事本站禁止的行为，不得发布任何侵犯他人著作权、商标权的内容。本站有删除各类不符合法律政策或不真实的信息的权利，本站有权暂停或关闭有违本站协议禁止内容的用户，用户也必须对在本网站上的言行承担法律责任。',
+                                  ' <br> ',
+                                  ' <br>10   本站是多用户商城。价格数量、库存等商品随时发生变动，本站不作特别通知。由于网站的商品信息大，本站会尽努力保证商品信息的准确性，但由于各种主观或客观的因素，网站显示的信息可能会有一定的差错，希望用户能理解并欢迎指正。',
+                                  ' <br> ',
+                                  ' <br>11   在您下单时，请您仔细确认所购商品的名称、价格、数量、规格、发票、定制费用、收货信息等相关事项。收货人与用户本人不一致的，收货人的行为和意思表示视为用户的行为和意思。用户应对收货人的行为所产生的法律后果承担责任。',
+                                  ' <br> ',
+                                  ' <br>12   由于市场变化及各种难以控制的因素影响，本网站无法保证您提交的订单信息购买的商品会有存货。如果您购买的商品发生缺货您有权取消订单，退回已付货款。正式下单前可与网站客服联系取得明确的订单事宜。',
+                                  ' <br> ',
+                                  ' <br>13   销售方将会把您购买的商品发送给指定的物流公司或快递公司，运费在取货时支付给物流公司或快递公司。如因以下情况造成订单延误或无法配送，本网站及销售方不承担延迟配送的责任。',
+                                  ' <br> ',
+                                  ' <br>a用户提供的信息错误，地址不详细、收货人错误，电话号码错误等。',
+                                  ' <br> ',
+                                  ' <br>b货物送达无人签收导致无法配送或延迟配送。',
+                                  ' <br> ',
+                                  ' <br>c不可抗力因素。例：自然灾害，交通管制，实发战争。 ',
+                                  ' <br> ',
+                                  ' <br>14   如因不可抗或其他本站无法控制的原因，使本站销售系统崩溃或无法正常使用导致网上交易无法完成或遗失有关信息记录的，礼壹网会合理的尽力处理好善后事宜。根据国家法律法规变化及网络运营需要，礼壹网有权对本站协议条款不时的进行修改，修改后的协议一旦被放在本站上即生效，本代替原本的协议。',
+                                  ' <br> ',
+                                  ' <br>货款支付退订或退货政策',
+                                  ' <br> ',
+                                  ' <br>1   本站作为运营平台保证您交易的安全及信息安全，用户下订单将通过支付宝或微信支付实时扣款，货款将由平台收取，平台对您的安全负责，请您保管好您的支付凭证。',
+                                  ' <br> ',
+                                  ' <br>2   您下订后，未对供货方造成任何损失的，可向本站提出申请退订。您下订后，供货方因商品数量不足或时间上来不及按时交货的，本网站会及时通知您退订。退订是指取消您所提交的订单，原数退回所付货款。按网站流程退订申请提出后三天内将货款退回您的账户。',
+                                  ' <br> ',
+                                  ' <br>3   本网站是批发定制型的品台（互联网+实体），所有商品一律批发价，销售利润非常微薄，您的商品是经过您的要求定制，在商家无错误情况下不支持退换货物。',
+                                  ' <br> ',
+                                  ' <br>4   如因质量存在问题退换商品须在规定时间内可向厂家提出换货要求。不需您承担所有退换货的物流费用，但是要保证退换商品的包装完整和商品的完好，否则不予退换。',
+                                  ' <br> '
+                                ].join("")
+                              });
+                            d.showModal();
+                          }
+                        </script>
+
+
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <script type="text/javascript">
+                $(function() {
+                  //填写用户信息并点击下一步
+                  $('.vip .btns .sub,.order .btns .sub').click(function() {
+                    var username = $('.vip input[name=username]').val();
+                    var password = $('.vip input[name=password]').val();
+                    var repassword = $('.vip input[name=repassword]').val();
+                    //var email=$('.vip input[name=email]').val();
+                    var key = $('.vip input[name=key]').val();
+                    if (username == '') {
+                      alert('请输入用户名！');
+                      return false;
+                    }
+                    if (password == '') {
+                      alert('请输入密码！');
+                      return false;
+                    }
+                    if (repassword == '') {
+                      alert('请再次输入密码！');
+                      return false;
+                    }
+                    if (password != repassword) {
+                      alert('两次输入的密码不一致！');
+                      return false;
+                    }
+                    // if(email==''||!vEmail){
+                    //  alert('请输入邮箱！');
+                    //  return false;
+                    // }
+                    // if (key == '') {
+                    //     alert('请输验证码！');
+                    //     return false;
+                    // }
+
+                  });
+
+
+
+                  //邮箱验证
+                  var vEmail = false;
+                  $('input[name=email]').blur(function() {
+                    checkEmail($(this))
+                  });
+
+                  function checkEmail(obj) {
+                    var filter = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+                    if (obj.val() != '' && !(filter.test(obj.val()))) {
+                      alert('邮箱格式错误！请输入正确的邮箱');
+                      obj.val('');
+                      obj.focus();
+                      vEmail = false;
+                    } else {
+                      vEmail = true;
+                    }
+                  }
+                });
+                $(".hy .select #vip").click(function() {
+                  $(this).addClass("hit");
+                  $(".hy .select #order").removeClass("hit");
+                  $("#groupid").val(1);
+
+                })
+                $(".hy .select #order").click(function() {
+                  $(this).addClass("hit");
+                  $(".hy .select #vip").removeClass("hit");
+                  $("#groupid").val(3);
+                })
+
+                function getkey() {
+                  if (chkphone($("#mycall")[0]))
+                    $.ajax({
+                      type: "post",
+                      url: "/e/duanxin/demo.php",
+                      data: {
+                        mycall: $("#mycall").val(),
+                        key:$("#mykey").val()
+                      },
+                      success: function(data) {
+
+                        if(data=="OutKeytime")
+                        {
+                            alert("验证码超时!");
+                        }else
+                        if(data=="FailKey")
+                        {
+                            alert("验证码错误!");
+                        }else
+                        {
+                              var mydata = data.split("|");
+                              localStorage.yzm = mydata[1];
+                              data = mydata[0] + mydata[2];
+
+                              if (mydata[2] == "00")
+                                alert("获取验证码成功!");
+                              else if (data == "00hasundefined") {
+                                alert("手机号码已经注册!");
+                              }
+                        }
+
+
+                      }
+                    })
+                }
+
+                function chkphone(o) {
+                  var v = o.value,
+                    pr = "130|131|132|133|134|135|136|137|138|139|140|145|147|150|151|152|153|155|156|157|158|159|170|175|176|177|178|180|181|182|183|184|185|186|187|188|189".split("|"),
+                    ok = false;
+                  if (v == "") {
+                    alert("请输入有效的手机号码！");
+                    return false;
+
+                  } else {
+                    var p = v.substr(0, 3);
+                    for (var i in pr) {
+                      if (pr[i] == p) {
+                        ok = true;
+                        break;
+                      }
+                    }
+                    if (!(ok && /^1[3-8]{1}[0-9]{9}$/.test(v))) {
+                      alert("请输入有效的手机号码！");
+                      o.value = "";
+                      o.focus();
+                      return false;
+                    }
+                  }
+                  return true;
+                }
+
+                function chksend() {
+                  $('#username').val($('#mycall').val());
+
+                  //验证码判断
+                  var fg = 1;
+                  $.ajax({
+                    type: "post",
+                    url: "/e/duanxin/check.php",
+                    async: false,
+                    data: {
+                      key: $("#key").val()
+                    },
+                    success: function(data) {
+                      if (localStorage.yzm != data) {
+						  alert(localStorage.yzm)
+						  alert(data)
+                        alert("手机验证码错误!");
+                        fg = 0;
+                      }
+                    }
+                  })
+
+
+                  if (fg == 0) {
+                    return false;
+                  }
+
+                }
+              </script>
+
+<div class="hbxian"></div>
+<div style="width: 100%;">
+	<div style="width: 1200px; margin: 0 auto;display:flex;padding-top:30px;" class="Lqsue">
+		
+		<ul class="MqeUl" style="width: 130px;margin-left: 30px;">
+			<li id="Mqeds">全部商品分类</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=83" target="_blank">办公</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=58" target="_blank">数码</a>
+			</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=25" target="_blank">家居</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=26" target="_blank">家纺</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=24" target="_blank">厨具</a>
+			</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=63" target="_blank">服饰</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=60" target="_blank">箱包皮具</a>
+			</li>
+			
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=79" target="_blank">商务</a>
+			</li>
+		</ul>
+		<ul class="MqeUl" style="width:140px;">
+              <li id="Mqeds">帮助中心</li>
+              <li><a href="contactUs.html">联系我们</a> </li>
+    </ul>
+		<!-- <div><img src="./会员注册_files/Najde_19.jpg" style="margin-left: 40px;"> </div> -->
+	</div>
+</div>
+<div style="width:100%; height: 40px; border-bottom: 1px solid #d5d6d8;"></div>
+<div style="width:100%; height: 30px;"></div>
+<div style="width: 1200px; margin: 0 auto; text-align: center; line-height: 25px;" class="Mqesdre">
+  
+<p>静态页面开发者：李伟</p>
+  
+
+<iframe frameborder="0" style="margin:0 auto;" height="90" width="90" allowtransparency="true" scrolling="no" src="./配送地址列表_files/gshdimg.html" rel="nofollow"></iframe>
+<a href="http://www.cqgseb.cn/ztgsgl/WebSiteMonitoring/WebUI/XFWQ/Index.aspx?xh=313" target="_blank">
+  <img src="./配送地址列表_files/wqz.png" height="90" rel="nofollow">
+</a>
+</div>
+																																																																																																<div id="PcIndicate"></div>
+<div style="width:100%; height: 20px;"></div>
+<script>
+	$(".fdright ul li").eq(1).hide();
+</script>
+<script type="text/javascript">
+ function mobile_device_detect(url){
+  var thisOS=navigator.platform;
+  var os=new Array("iPhone","iPod","android","Nokia","SymbianOS","Symbian","Windows Phone","Phone","Linux armv71","MAUI","UNTRUSTED/1.0","Windows CE","BlackBerry","IEMobile");
+  for(var i=0;i<os.length;i++){
+    if(thisOS.match(os[i])){   
+         window.location=url;
+         }
+  }
+  var check = navigator.appVersion;
+      if( check.match(/linux/i) ){
+          if(check.match(/mobile/i) || check.match(/X11/i)) {
+         window.location=url;
+        }  
+      }
+  Array.prototype.in_array = function(e){
+    for(i=0;i<this.length;i++){
+      if(this[i] == e)
+      return true;
+      }
+      return false;
+    }
+  } 
+mobile_device_detect("http://m.liyinet.com");/*指定跳转地址*/
+ </script>
+   <script>
+    /*解除语言翻译拖动的功能*/
+    window.onload=function(){
+        setTimeout(function(){document.getElementById("LauncherTranslatePhrase").onclick=function(){
+            document.getElementById("WidgetFloaterPanels").onmousedown=null;
+        };},100);
+        
+    }
+  </script>
+</body></html>

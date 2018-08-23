@@ -1,0 +1,495 @@
+@font-face {
+  font-family: didot-bold;
+  src: url(../fonts/Didot_Bold.ttf); }
+@font-face {
+  font-family: didot;
+  src: url(../fonts/Didot.ttf); }
+@font-face {
+  font-family: didot-htf-m96-medium-ital;
+  src: url(../fonts/didot-htf-m96-medium-ital.ttf); }
+@font-face {
+  font-family: thex;
+  src: url(../fonts/HelveticaNeueLTPro-ThEx.otf); }
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.bg-img {
+  position: absolute; }
+
+.row {
+  width: 100%; }
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.page-section {
+  height: 900px; }
+  .page-section .content, .page-section .container {
+    width: 1000px;
+    margin: 0 auto; }
+
+.img-bg {
+  display: none; }
+
+html {
+  width: 100%; }
+  html body {
+    width: 100%; }
+
+#landing {
+  background-attachment: fixed; }
+
+.fl {
+  float: left; }
+
+.ft-STHeiti {
+  font-family: "STHeiti Light [STXihei]"; }
+
+.ft-dodit {
+  font-family: dodit; }
+
+.ft-thex {
+  font-family: thex; }
+
+.ft-arial {
+  font-family: Arial; }
+
+.fz-12 {
+  font-size: 12px; }
+
+.fz-16 {
+  font-size: 16px; }
+
+.fz-42 {
+  font-size: 42px; }
+
+.fz-10 {
+  font-size: 10px; }
+
+.top-nav {
+  height: 100px;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  top: 0px;
+  z-index: 900;
+  box-shadow: 0px 1px 5px #ccc; }
+  .top-nav .top-menu-toggle {
+    display: none; }
+  .top-nav .brand {
+    margin-left: 50px;
+    float: left; }
+  .top-nav .top-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+    margin: 0 auto;
+    font-family: "Microsoft Yahei",Arial,simsun; }/*by smave*/
+    .top-nav .top-menu li {
+      list-style: none;
+      display: inline-block;
+      line-height: 100px;
+      margin-left: 50px; }
+      .top-nav .top-menu li.no-marge {
+        margin-left: 25px; }
+      .top-nav .top-menu li a {
+        color: #333;
+        font-size: 12px;
+        text-decoration: none; }
+        .top-nav .top-menu li a:hover {
+          text-decoration: underline; }
+  .top-nav .icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 0; }
+    .top-nav .icons li {
+      list-style: none;
+      display: inline-block;
+      line-height: 100px; }
+      .top-nav .icons li a {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-left: 6px;
+        margin-top: 34px; }
+      .top-nav .icons li .qq {
+        background: url(../img/QQ.png); }
+        .top-nav .icons li .qq:hover {
+          background: url(../img/QQ_V.png); }
+      .top-nav .icons li .xinlang {
+        background: url(../img/WX.png); }
+        .top-nav .icons li .xinlang:hover {
+          background: url(../img/WX_V.png); }
+      .top-nav .icons li .weixin {
+        background: url(../img/XL.png); }
+        .top-nav .icons li .weixin:hover {
+          background: url(../img/XL_V.png); }
+  .top-nav .search {
+    display: inline-block;
+    height: 100px;
+    margin-left: 24px;
+    margin-right: 60px;
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .top-nav .search .search-box {
+      margin-right: 10px;
+      width: 0px;
+      border: 0px;
+      padding: 0;
+      height: 25px;
+      background: #333;
+      color: #fff; }
+    .top-nav .search .search-icon {
+      display: inline-block;
+      margin-top: 34px;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      background: url(../img/SOSUO.png) no-repeat;
+      margin-bottom: -10px; }
+      .top-nav .search .search-icon:hover {
+        background: url(../img/SOSUO_V.png) no-repeat; }
+
+@-webkit-keyframes rotate360 {
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@-moz-keyframes rotate360 {
+  0% {
+    -moz-transform: rotate(0deg); }
+
+  100% {
+    -moz-transform: rotate(360deg); } }
+@-o-keyframes rotate360 {
+  0% {
+    -o-transform: rotate(0deg); }
+
+  100% {
+    -o-transform: rotate(360deg); } }
+@-ms-keyframes rotate360 {
+  0% {
+    -ms-transform: rotate(0deg); }
+
+  100% {
+    -ms-transform: rotate(360deg); } }
+@-keyframes rotate360 {
+  0% {
+    transform: rotate(0deg); }
+
+  100% {
+    transform: rotate(360deg); } }
+#landing {
+  margin-top: 100px;
+  position: relative; }
+  #landing .animate {
+    position: absolute;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    width: 650px;
+    height: 650px;
+    -webkit-animation: rotate360 30s infinite linear;
+    -moz-animation: rotate360 30s infinite linear;
+    -o-animation: rotate360 30s infinite linear;
+    -ms-animation: rotate360 30s infinite linear;
+    animation: rotate360 30s infinite linear; }
+
+#about .container {
+  padding-top: 200px; }
+  #about .container .left-nav {
+    float: left;
+    margin-left: 175px;
+    height: 450px;
+    width: 284px;
+    border-left: 1px solid #ede9d7;
+    border-right: 1px solid #ede9d7;
+    padding-top: 106px; }
+    #about .container .left-nav li {
+      text-align: center;
+      height: 30px;
+      line-height: 30px; }
+      #about .container .left-nav li.split {
+        font-size: 36px;
+        color: #333; }
+      #about .container .left-nav li img {
+        visibility: hidden;
+        margin-right: 10px; }
+      #about .container .left-nav li.active img {
+        visibility: visible; }
+      #about .container .left-nav li.active a.ft-arial {
+        color: #a1955f; }
+      #about .container .left-nav li.ft-thex {
+        color: #ede9d7; }
+      #about .container .left-nav li a.ft-arial {
+        color: #999999; }
+      #about .container .left-nav li a:hover {
+        color: #a1955f; }
+  #about .container .details-outer {
+    height: 450px;
+    width: 310px;
+    background: #a1955f;
+    float: left;
+    margin-left: 63px;
+    overflow: hidden;
+    padding: 50px 20px 30px 20px; }
+    #about .container .details-outer .jspVerticalBar {
+      width: 3px;
+      background: url(../img/scroll-bg.png) repeat-y; }
+    #about .container .details-outer .jspDrag {
+      background: #333; }
+    #about .container .details-outer .jspTrack {
+      background: none; }
+    #about .container .details-outer .scrollable {
+      width: 270px;
+      height: 370px;
+      display: none;
+      color: #fff;
+      font-size: 12px; }
+      #about .container .details-outer .scrollable.active {
+        display: block; }
+
+#products {
+  background: #f1eee1; }
+  #products .header {
+    text-align: center;
+    padding-top: 84px; }
+    #products .header .brand {
+      margin-right: 12px; }
+    #products .header .split {
+      width: 640px;
+      border-bottom: 1px solid #999;
+      height: 0px;
+      margin: 0 auto;
+      padding-top: 5px; }
+    #products .header .sub-menu a {
+      color: #999;
+      text-decoration: none;
+      padding: 0px 20px; }
+      #products .header .sub-menu a:hover {
+        text-decoration: underline; }
+      #products .header .sub-menu a.active {
+        color: #a89d6b; }
+  #products .gallery-outer {
+    margin-top: 77px;
+    height: 580px;
+    position: relative; }
+    #products .gallery-outer .prod-section {
+      display: none; }
+      #products .gallery-outer .prod-section.active {
+        display: block; }
+      #products .gallery-outer .prod-section .prod-series-section {
+        display: none; }
+        #products .gallery-outer .prod-section .prod-series-section.active {
+          display: block; }
+        #products .gallery-outer .prod-section .prod-series-section .video-wrapper {
+          width: 680px;
+          margin: 0 auto; }
+          #products .gallery-outer .prod-section .prod-series-section .video-wrapper .left {
+            width: 140px;
+            height: 410px;
+            margin-right: -4px; }
+            #products .gallery-outer .prod-section .prod-series-section .video-wrapper .left .video-nav img {
+              margin-bottom: 1px; }
+            #products .gallery-outer .prod-section .prod-series-section .video-wrapper .left .jspVerticalBar {
+              right: 5px; }
+            #products .gallery-outer .prod-section .prod-series-section .video-wrapper .left .jspVerticalBar {
+              background: none; }
+            #products .gallery-outer .prod-section .prod-series-section .video-wrapper .left .jspTrack {
+              background: #ccc; }
+            #products .gallery-outer .prod-section .prod-series-section .video-wrapper .left .jspDrag {
+              background: #a1955f; }
+    #products .gallery-outer #prod-seasons .image-gallery, #products .gallery-outer #prod-production .image-gallery {
+      font-size: 0px;
+      text-align: center; }
+      #products .gallery-outer #prod-seasons .image-gallery li, #products .gallery-outer #prod-production .image-gallery li {
+        display: inline-block;
+        padding: 5px;
+        cursor: pointer;
+        vertical-align: top; }
+        #products .gallery-outer #prod-seasons .image-gallery li .wrapper .series, #products .gallery-outer #prod-production .image-gallery li .wrapper .series {
+          width: 221px;
+          height: 336px; }
+        #products .gallery-outer #prod-seasons .image-gallery li .wrapper:hover .outer, #products .gallery-outer #prod-production .image-gallery li .wrapper:hover .outer {
+          opacity: 100;
+          transition: all 1s ease; }
+        #products .gallery-outer #prod-seasons .image-gallery li .wrapper .outer, #products .gallery-outer #prod-production .image-gallery li .wrapper .outer {
+          opacity: 0;
+          height: 60px; }
+          #products .gallery-outer #prod-seasons .image-gallery li .wrapper .outer .txt, #products .gallery-outer #prod-production .image-gallery li .wrapper .outer .txt {
+            font-size: 10px;
+            color: #999; }
+          #products .gallery-outer #prod-seasons .image-gallery li .wrapper .outer .split, #products .gallery-outer #prod-production .image-gallery li .wrapper .outer .split {
+            width: 160px;
+            margin: 0 auto;
+            height: 0px;
+            line-height: 0px;
+            border-bottom: 1px solid #999; }
+        #products .gallery-outer #prod-seasons .image-gallery li.top .series, #products .gallery-outer #prod-production .image-gallery li.top .series {
+          margin-top: 10px; }
+        #products .gallery-outer #prod-seasons .image-gallery li.top .outer, #products .gallery-outer #prod-production .image-gallery li.top .outer {
+          margin-top: 10px; }
+        #products .gallery-outer #prod-seasons .image-gallery li.bottom .outer, #products .gallery-outer #prod-production .image-gallery li.bottom .outer {
+          margin-bottom: 10px; }
+
+#brand-news .container {
+  height: 100%; }
+  #brand-news .container .brand-wrapper {
+    border-left: 1px solid #ede9d7;
+    height: 100%;
+    float: left;
+    width: 200px;
+    padding-left: 20px; }
+    #brand-news .container .brand-wrapper .big-cycle {
+      margin-top: 360px;
+      display: block; }
+  #brand-news .container .news-nav {
+    height: 100%;
+    border-left: 1px solid #ede9d7;
+    width: 200px;
+    float: left; }
+    #brand-news .container .news-nav .pre {
+      margin-top: 128px; }
+    #brand-news .container .news-nav .pre, #brand-news .container .news-nav .after {
+      margin-left: 22px;
+      cursor: pointer; }
+    #brand-news .container .news-nav .nav-list-outer {
+      height: 560px;
+      overflow: hidden;
+      position: relative; }
+      #brand-news .container .news-nav .nav-list-outer .nav-list {
+        position: absolute;
+        left: 0;
+        top: 0; }
+        #brand-news .container .news-nav .nav-list-outer .nav-list a {
+          text-decoration: none; }
+          #brand-news .container .news-nav .nav-list-outer .nav-list a.active .indify-icon {
+            background: url(../img/ZISHU5_03_03.png) no-repeat 50% 50%; }
+          #brand-news .container .news-nav .nav-list-outer .nav-list a .nav-item {
+            height: 140px;
+            padding-top: 41px;
+            position: relative;
+            padding-left: 22px; }
+            #brand-news .container .news-nav .nav-list-outer .nav-list a .nav-item span.indify-icon {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 3px;
+              height: 5px;
+              display: block;
+              background: url(../img/ZISHU5_03_06.png) no-repeat 50% 50%; }
+            #brand-news .container .news-nav .nav-list-outer .nav-list a .nav-item .year, #brand-news .container .news-nav .nav-list-outer .nav-list a .nav-item .month {
+              color: #ede9d7;
+              line-height: 1em;
+              height: 1em; }
+            #brand-news .container .news-nav .nav-list-outer .nav-list a .nav-item .title {
+              color: #999; }
+  #brand-news .container .news-details-outer {
+    float: left;
+    height: 100%;
+    border-left: 1px solid #ede9d7;
+    padding-left: 38px; }
+    #brand-news .container .news-details-outer .jspVerticalBar {
+      width: 4px; }
+    #brand-news .container .news-details-outer .jspDrag {
+      background: #ede9d7; }
+    #brand-news .container .news-details-outer .news-entity {
+      width: 310px;
+      height: 580px;
+      margin-top: 146px;
+      color: #999;
+      display: none; }
+      #brand-news .container .news-details-outer .news-entity.active {
+        display: block; }
+
+#show-room .container {
+  padding-top: 175px; }
+  #show-room .container .left {
+    height: 100%;
+    width: 191px;
+    background: #fff;
+    height: 630px; }
+    #show-room .container .left .nav .nav-pre {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: url(../img/nav-left-gray.png) no-repeat;
+      cursor: pointer; }
+    #show-room .container .left .nav .nav-next {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: url(../img/nav-right-gray.png) no-repeat;
+      cursor: pointer;
+      margin-left: 20px; }
+    #show-room .container .left .sbHolder {
+      width: 140px;
+      border: 1px solid #ccc;
+      margin: 160px 0 0 30px; }
+    #show-room .container .left .sbToggle {
+      background: url(../img/select-icons.png) 7px -116px no-repeat; }
+      #show-room .container .left .sbToggle:hover {
+        background: url(../img/select-icons.png) 7px -167px no-repeat; }
+    #show-room .container .left .sbToggleOpen {
+      background: url(../img/select-icons.png) 7px -16px no-repeat; }
+      #show-room .container .left .sbToggleOpen:hover {
+        background: url(../img/select-icons.png) 7px -66px no-repeat; }
+    #show-room .container .left .sbSelector {
+      width: 110px; }
+    #show-room .container .left .sbOptions {
+      width: 140px; }
+    #show-room .container .left .sbOptions a:link, #show-room .container .left .sbOptions a:visited {
+      color: #aaa; }
+    #show-room .container .left .address-zh {
+      font-size: 12px;
+      color: #999;
+      display: block;
+      padding-left: 30px;
+      padding-top: 20px; }
+    #show-room .container .left .address-en {
+      font-size: 12px;
+      color: #a1955f;
+      display: block;
+      padding-left: 30px; }
+    #show-room .container .left .nav {
+      padding-left: 30px; }
+  #show-room .container .image-wrapper {
+    width: 809px;
+    position: relative; }
+    #show-room .container .image-wrapper #show-room-pre, #show-room .container .image-wrapper #show-room-next {
+      position: absolute;
+      z-index: 800;
+      top: 50%;
+      cursor: pointer;
+      padding: 10px;
+      opacity: 0.5;
+      background: #fff;
+      filter: alpha(opacity=50); }
+    #show-room .container .image-wrapper #show-room-next {
+      right: 0; }
+    #show-room .container .image-wrapper .group-image {
+      display: none; }
+      #show-room .container .image-wrapper .group-image.active {
+        display: block; }
+
+#contact-us .container {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative; }
+  #contact-us .container img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -290px;
+    margin-top: -174px; }

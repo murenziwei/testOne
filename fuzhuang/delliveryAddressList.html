@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)/e/ShopSys/address/ListAddress.php -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>李伟</title>
+    
+    <link href="./css/_LiYiAS.css" rel="stylesheet">
+    <script src="./配送地址列表_files/jquery1.42.min.js"></script>
+    <script src="./配送地址列表_files/jquery.SuperSlide.2.1.1.js"></script>
+    <!-- <script src="/i/LYHome.js"></script> -->
+    <!-- 语言转换 -->
+    <script type='text/javascript'>setTimeout(function () { { var s = document.createElement('script'); s.type = 'text/javascript'; s.charset = 'UTF-8'; s.src = ((location && location.href && location.href.indexOf('https') == 0) ? 'https://ssl.microsofttranslator.com' : 'http://www.microsofttranslator.com') + '/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=True&ui=true&settings=Manual&from='; var p = document.getElementsByTagName('head')[0] || document.documentElement; p.insertBefore(s, p.firstChild); } }, 0);</script>
+    <style>
+        a                       { text-decoration: none; color: #002280 }
+        a:hover                 { text-decoration: underline }
+        body                    { font-size: 9pt; }
+        table                   { font: 9pt Tahoma, Verdana; color: #000000 }
+        input,select,textarea   { font: 9pt Tahoma, Verdana; font-weight: normal; }
+        select                  { font: 9pt Tahoma, Verdana; font-weight: normal; }
+        .category               { font: 9pt Tahoma, Verdana; color: #000000; background-color: #fcfcfc }
+        .singleborder           { font-size: 0px; line-height: 1px; padding: 0px; background-color: #F8F8F8 }
+        .bold                   { font-weight: bold }
+        /*修改主要色调*/
+        .header{ font: 9pt Tahoma, Verdana; color: #FFFFFF; font-weight: bold; background-color:none; }
+        .header a               { color: #FFFFFF }
+        .tableborder{ margin-left:20px; margin-top:20px;}
+        .header td{ color:#444;}
+
+
+        /*分页样式*/
+        .epages{margin:3px 0;font:11px/12px Tahoma}
+        .epages *{vertical-align:middle;}
+        .epages a{padding:1px 4px 1px;border:1px solid #A6CBE7;margin:0 1px 0 0;text-align:center;text-decoration:none;font:normal 12px/14px verdana;}
+        .epages a:hover{border:#659B28 1px solid;background:#f3f8ef;text-decoration:none;color:#004c7d}
+        .epages input{margin-bottom:0px;border:1px solid #659B28;height:15px;font:bold 12px/15px Verdana;padding-bottom:1px;padding-left:1px;margin-right:1px;color:#659B28;}
+    </style>
+    <script>
+        function DisplayImg(ss,imgname,phome){
+            if(imgname=="menumemberimg")
+            {
+                img=todisplay(domenumember,phome);
+                document.images.menumemberimg.src=img;
+            }
+            else if(imgname=="menumsgimg")
+            {
+                img=todisplay(domenumsg,phome);
+                document.images.menumsgimg.src=img;
+            }
+            else if(imgname=="menuinfoimg")
+            {
+                img=todisplay(domenuinfo,phome);
+                document.images.menuinfoimg.src=img;
+            }
+            else if(imgname=="menuspaceimg")
+            {
+                img=todisplay(domenuspace,phome);
+                document.images.menuspaceimg.src=img;
+            }
+            else if(imgname=="menupayimg")
+            {
+                img=todisplay(domenupay,phome);
+                document.images.menupayimg.src=img;
+            }
+            else if(imgname=="menushopimg")
+            {
+                img=todisplay(domenushop,phome);
+                document.images.menushopimg.src=img;
+            }
+            else
+            {}
+            DisplayAllMenu(imgname);
+        }
+
+        function todisplay(ss,phome){
+            if(ss.style.display=="")
+            {
+                ss.style.display="none";
+                theimg="/skin/member/images/add.gif";
+            }
+            else
+            {
+                ss.style.display="";
+                theimg="/skin/member/images/noadd.gif";
+            }
+            return theimg;
+        }
+
+        function turnit(ss,img){
+            DisplayImg(ss,img,0);
+        }
+
+        function DisplayAllMenu(imgname){
+            if(imgname!='menumemberimg'&&domenumember.style.display=="")
+            {
+                domenumember.style.display="none";
+                document.images.menumemberimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menumsgimg'&&domenumsg.style.display=="")
+            {
+                domenumsg.style.display="none";
+                document.images.menumsgimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menuinfoimg'&&domenuinfo.style.display=="")
+            {
+                domenuinfo.style.display="none";
+                document.images.menuinfoimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menuspaceimg'&&domenuspace.style.display=="")
+            {
+                domenuspace.style.display="none";
+                document.images.menuspaceimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menupayimg'&&domenupay.style.display=="")
+            {
+                domenupay.style.display="none";
+                document.images.menupayimg.src="/skin/member/images/add.gif";
+            }
+            if(imgname!='menushopimg'&&domenushop.style.display=="")
+            {
+                domenushop.style.display="none";
+                document.images.menushopimg.src="/skin/member/images/add.gif";
+            }
+        }
+    </script>
+</head>
+<body leftmargin="0" topmargin="0">
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+                <div class="Topl">
+                    <div class="Lasd">
+                        <div class="Fla">
+                            <span style="color: #ccc;">Hi&nbsp;<strong style=" color:#ff0000">13825000114</strong>&nbsp;欢迎来到礼壹网</span><a href="javascript:void(0)" onclick="return confirm(&#39;确认要退出?&#39;);">退出</a>
+                        </div>
+                        <div class="Ras">
+                            <div id="MicrosoftTranslatorWidget" class="Dark" style=" background-color: transparent;" translate="no" len="501"></div>
+                            <a href="homePage.html">网站首页</a><a>|</a>
+                            
+                            
+                            <a href="contactUs.html">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+    <style>
+    	a.changefieldandcss {
+    		color: #fb565c;
+    	}
+    </style>
+<div class="Log">
+	<div class="LMor">
+		<div class="LmImg">
+			<a href="homePage.html">
+				<img src="./配送地址列表_files/as_05.jpg">
+			</a>
+		</div>
+
+		<div class="NasS">
+            
+            <form name="search" action="/e/search/index.php" id="search" method="post">
+                <input name="show" value="title,smalltext,fenlei,intro,productno,pbrand" type="hidden">
+                <input type="hidden" name="classid" id="jq-classid" value="22">
+                <input type="hidden" name="tempid" id="jq-tid" value="2">
+                <div class="r">
+                    <input type="text" name="keyboard" placeholder="请输入礼品、商家搜索" class="nr">
+                  <input type="submit" value="搜索" class="submit_ipt">
+                </div>
+            </form>
+            <script type="text/javascript">
+                $("#goods").click(function() {
+                    var n = $(this).index();
+                    $("#jq-classid").val($(this).attr("data-cid"));
+                    $("#jq-tid").val($(this).attr("data-tid"));
+                });
+                $('.Jam a').click(function(){
+                    $(this).addClass('on').siblings().removeClass('on');
+                });
+                $('#search').submit(function(){
+                    if($('#company').hasClass('on')){
+                        window.location.href='/e/action/ListInfo.php?&mid=1&tempid=14&ph=1&company='+$('input[name=keyboard]').val();
+                        return false;
+                    }
+                });
+            </script>
+        </div>
+		<div class="dhhbmn"><img src="./配送地址列表_files/fdgdtcc_03.png">&nbsp;&nbsp;&nbsp;13825000114</div>
+	</div>
+</div>
+<script>
+	$(".Mas")
+		.hover(function() {
+			$(this)
+				.find(".Make")
+				.show();
+			$(".ci-right")
+				.css("transform", "rotate(180deg)")
+
+		}, function() {
+			$(this)
+				.find(".Make")
+				.hide();
+			$(".ci-right")
+				.css("transform", "rotate(0deg)")
+
+		})
+</script>    <div class="grhybn"></div>
+    <div style=" width:1200px; margin:0 auto;font-size:20px; text-align:center; line-height:50px;">配送地址列表   <a style="float:right;" href="/">首页</a></div>
+    <table width="1200" border="0" align="center" cellpadding="12" cellspacing="1" style="border-top:1px solid #eaeaeb">
+        <tbody><tr>
+            <td width="20%" valign="top" style=" border-right:1px solid #eaeaeb">
+                <div class="Menuboxa">
+                    <ul>
+                        <li><a href="会员中心.html">个人中心</a></li>
+                        <li><a href="修改资料.html">修改资料</a></li>
+                        <li><a href="修改密码.html">修改密码</a></li>
+                        <!-- <li><a href="/e/member/fava/">收藏的产品</a></li> -->
+                        <li><a href="购物车.html">我的购物车</a></li>
+                        <!-- <li><a href="/e/ShopSys/ListDd/?page=0&amp;show=5">我的订单</a></li>
+                        <li><a href="/e/ShopSys/Lpkdh/?page=0&amp;show=10">我的礼品卡</a></li>
+                         -->
+                        <li><a href="配送地址列表.html">收货地址</a></li>
+                        <!-- <li><a href="/e/ShopSys/wuliu/">物流查询</a></li> -->
+                       <!-- <li><a href="/e/ShopSys/ListDd/?personal=1&page=0&show=5&th=1">退货</a></li>-->
+                        <!-- <li><a href="/e/member/doaction.php?enews=exit" onclick="return confirm(&#39;确认要退出?&#39;);">退出</a></li> -->
+                    </ul>
+                </div>
+            </td>
+            <td width="80%" height="420" valign="top" bgcolor="#FFFFFF" style="position:relative;">
+<style>
+.mrdz{
+	text-align:center;
+	display:block;
+	padding: 4px 5px;
+    background: #fb565c;
+    color: #fff;
+    border: 1px solid #f60;
+    border-radius: 3px;
+    text-decoration: none;
+	opacity:0;}
+.mrdz a{ color:#fff;}
+.mrsz{ position:relative;}
+.mr{ position:absolute; top:37px; left:13px; z-index:101; padding:20px 0px;}
+a.psdz{text-align: center;
+    float: right;
+    margin-top: 10px;
+    width: 105px;
+    height: 30px;
+    background: #fb565c;
+    line-height: 30px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;}
+</style>
+<br>
+
+ <script src="./配送地址列表_files/jquery-2.1.1.min.js" charset="utf-8"></script>
+    <script src="./配送地址列表_files/shop.js" charset="utf-8"></script>
+    <!-- 省市三级联动 -->
+    <script type="text/javascript" src="./配送地址列表_files/jquery.cityselect.js"></script>
+
+    <!-- target="_blank" -->
+    <form action="/e/ShopSys/doaction.php" method="post" name="myorder" id="myorder" onsubmit="return confirm(&#39;确认提交?&#39;);">
+        <!-- form提交 判断提交类型 -->
+        <input type="hidden" name="enews" value="pc_AddDd">
+        <div>
+            <div style=";background-color:#F0E5E5;padding:5px;border-bottom:2px double #B5B5B5">收货地址 <button type="button" name="button" onclick="AddAddress()">新增</button></div>
+            <div class="mystyle">
+                <div id="Address" style="overflow:hidden;margin-top:10px">  <!-- ////////////////////地址信息////////////你需要修改的区域///////////////////////// -->
+
+  <div class="xzdz" style="background-color:#D8E6C3;float:left;width:300px;border:2px dashed #ACAF8F;margin-right:5px">
+    <div style="float:left;width:240px;overflow:hidden">
+      <div style="line-height:75px;display:inline-block;height:100px;float:left;padding-right:10px">
+                  <input type="radio" onclick="updateexp(128,this)" truename="是" tel="13825000114" tel2="" email="" address="上海/黄浦区/顶顶顶顶" name="address" checked="" value="
+          128">
+      </div>
+      <div style="float:left;display:inline-block;height:80px;width:205px;">
+        <p>姓名：
+          是        </p>
+        <p style="white-space:nowrap;">地址：
+          <span id="addressone">
+                    上海/黄浦区/顶顶顶顶          </span>
+        </p>
+        <p>电话：
+          13825000114        </p>
+        <p>电话：
+                  </p>
+        <p>邮箱：
+                  </p>
+      </div>
+    </div>
+    <div style="float:left;margin-left:10px">
+      <button style="display:block;margin-top:4px" type="button" name="button" onclick="EditAddress(128,&#39;是&#39;,&#39;2/上海/黄浦区/顶顶顶顶&#39;,&#39;13825000114&#39;,&#39;&#39;,&#39;&#39;)">修改</button>
+      <button style="display:block;margin-top:4px" type="button" name="button" onclick="DelAddress(128)">删除</button>
+      <button style="display:block;margin-top:4px" type="button" name="button" truename="是" tel="13825000114" tel2="" email="" address="上海/黄浦区/顶顶顶顶" onclick="DefAddress(128,this)">默认</button>
+    </div>
+  </div>
+
+  <!-- ////////////////////////////////////地址信息///////////////////////////////////// -->
+      <form id="AddAddressForm" style="width:100%">
+    </form>
+    <form id="EditAddressForm" style="width:100%">
+    </form>
+
+    <!-- ////////////////////////////////你可以修改///////////////////////// -->
+    <!-- 添加地址模板 -->
+    
+    <!-- 修改地址模板 -->
+    
+    <script type="text/javascript">
+      var edit;
+      var add;
+      //读取模板
+      $(document).ready(function() {
+        add = $("#AddAddressTemp").html();
+        edit = $("#EditAddressTemp").html();
+        $("#AddAddressTemp").remove();
+        $("#EditAddressTemp").remove();
+        $("#addresstwo").text($("#addressone").text());
+        //当前当前选定的radio
+         $("input[name='address']").each(function(){
+
+           if($(this).prop("checked"))
+           {
+              $(this).click();
+           }
+
+         })
+      });
+
+      //添加地址
+      function AddAddress() {
+        CancalAdd();
+        $("#AddAddressForm").html(add);
+
+        $("#city").citySelect({
+          prov: "none",
+          nodata: "none"
+        });
+      }
+
+      //取消
+      function CancalAdd() {
+        $("#AddAddressForm").html("");
+        $("#EditAddressForm").html("");
+      }
+
+      var yz = new Object();
+
+      //验证IP
+      yz.ip = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])(\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])){3}$/;
+      //验证EMAIL
+      yz.email = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+      //验证日期格式2009-07-13
+      yz.date = /^\d{4}-(0?[1-9]|1[0-2])-(0?[1-9]|[1-2]\d|3[0-1])$/;
+      //验证时间格式16:55:39
+      yz.time = new RegExp("^([0-1]\\d|2[0-3]):[0-5]\\d:[0-5]\\d$");
+      //验证电话号码
+      yz.tel = /^((\(\d{3}\))|(\d{3}\-))?1\d{10}$/;
+      //身份证
+      yz.idcard = /^\d{15}|\d{}18$/;
+      //QQ
+      yz.qq = /^[1-9]\d{4,8}$/;
+      //名字
+      yz.chinese = /[^\u0000-\u00FF]/;
+
+
+      //验证函数
+      function verify(str, pat) {
+        var thePat;
+        thePat = yz[pat];
+        if (thePat.test(str)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+
+      function yzform(form) {
+
+        if($("#addressmark").val()=="")
+        {
+          alert( " 地址不能为空!");
+          return false;
+        }
+
+        $(form).find("input").each(function() {
+          //判断所有text表单
+          flag = true;
+          if (this.tagName == "INPUT" && $(this).attr("type") == "text") {
+
+            var rule = $(this).attr("rule");
+            var rules = new Array();
+            var ruleinfo = $(this).attr("ruleinfo");
+
+            if (rule != undefined)
+              rules = rule.split(" ");
+
+            for (var i in rules) {
+              for (var r in yz) {
+                if (rules[i] == "no") {
+                  if ($.trim($(this).val()).length == 0) {
+                    alert(ruleinfo + " 不能为空!");
+                    flag = false;
+                    return false;
+                  }
+                } else
+                if (rules[i] == r && rules[i] == "no") {
+                  if (!verify($.trim($(this).val()), r)) {
+                    alert("请输入正确的 " + ruleinfo);
+                    flag = false;
+                    return false;
+                  }
+                }
+              }
+            }
+          }
+
+        });
+
+        if (flag == false) {
+          return false;
+        }
+
+        return true;
+      }
+
+      //确认添加
+      function OkAdd() {
+
+        if (!yzform($("#AddAddressForm"))) {
+
+        } else {
+
+
+          //   var truename=$('.addess li input[name=truename]').val();
+          // var shdz=$('.addess li input#shdz').val();
+          // var phone=$('.addess li input[name=phone]').val();
+          // if(truename==''){
+          // 			alert('请输入收件人');
+          // 			return false;
+          // 		}
+          // 		if(shdz==''){
+          // 			alert('请输入收货地址');
+          // 			return false;
+          // 		}
+          // 		if(phone==''){
+          // 			alert('请输入电话号码');
+          // 			return false;
+          // 		}
+
+          var data = $("#AddAddressForm").serializeObject();
+          $.ajax({
+            type: "post",
+            url: "/e/ShopSys/doaction.php?enews=ajax_AddAddress",
+            data: data,
+            success: function(data) {
+              if (data == "success")
+                getAddress(1417, function(value) {
+                  $("#Address").html(value);
+                });
+              else {
+                alert(data);
+              }
+            }
+          })
+        }
+      }
+
+      //删除
+      function DelAddress(id) {
+        if (confirm("确认删除?"))
+          $.ajax({
+            type: "get",
+            url: "/e/ShopSys/doaction.php?enews=DelAddress",
+            data: {
+              addressid: id
+            },
+            success: function(data) {
+              getAddress(1417, function(value) {
+                $("#Address").html(value);
+              });
+            }
+          })
+      }
+
+      //修改地址
+      function EditAddress(id, truename, addressname, phone, email) {
+        CancalAdd();
+
+        $("#EditAddressForm").html(edit);
+        EditAddressForm.truename.value = truename;
+        var address = addressname.split("/");
+        if (address[0] == 3) {
+
+          $("#city").citySelect({
+            prov: address[1],
+            city: address[2],
+            dist: address[3],
+            nodata: "none"
+          });
+
+          $("*[name='addressname[]']").eq(4).val(address[4]);
+        }
+
+        if (address[0] == 2) {
+
+          $("#city").citySelect({
+            prov: address[1],
+            city: address[2],
+            nodata: "none"
+          });
+
+          $("*[name='addressname[]']").eq(4).val(address[3]);
+        }
+
+        EditAddressForm.phone.value = phone;
+        EditAddressForm.phone1.value = phone;
+        EditAddressForm.email.value = email;
+        EditAddressForm.addressid.value = id;
+
+      }
+
+      //确认修改
+      function OkEdit() {
+        var data = $("#EditAddressForm").serializeObject();
+        $.ajax({
+          type: "post",
+          url: "/e/ShopSys/doaction.php?enews=ajax_EditAddress",
+          data: data,
+          success: function(data) {
+            getAddress(1417, function(value) {
+              $("#Address").html(value);
+            });
+          }
+        })
+      }
+
+      //设为默认地址
+      function DefAddress(id, my) {
+        $.ajax({
+          type: "get",
+          url: "/e/ShopSys/doaction.php?enews=DefAddress",
+          data: {
+            addressid: id
+          },
+          success: function(data) {
+            getAddress(1417, function(value) {
+              $("#Address").html(value);
+              updateexp(id, my);
+            });
+          }
+        })
+
+      }
+
+      //更新对应的快递方式选择
+      function updateexp(addressid, my) {
+
+        $.ajax({
+          type: "post",
+          url: "/e/action/shop.php?action=chooseaddress",
+          data: {
+            addressid: addressid,
+            pressname: $(my).attr("address"),
+            truename: $(my).attr("truename"),
+            tel: $(my).attr("tel"),
+            tel2: $(my).attr("tel2"),
+            email: $(my).attr("email")
+          },
+          success: function(data) {
+            getBuycar_order(function(value) {
+              $("#DD_show").html(value);
+              $("#addresstwo").text($(my).attr("address"));
+            });
+          }
+        })
+
+      }
+    </script>
+</div>
+                <script type="text/javascript">
+                    //读取收货地址
+                    $(document).ready(function() {
+                        getAddress(1417, function(value) {
+                            $("#Address").html(value);
+                        });
+                    });
+                </script>
+                <div style="margin-top:5px">
+                    寄送至： <span id="addresstwo">上海/黄浦区/顶顶顶顶</span>
+                </div>
+            </div>
+<script>
+$(".mrdz a").hover(function(){
+	$(this).parent(".mrdz").css("opacity","1")
+
+	},function(){
+		$(".mrdz").css("opacity","0")
+
+		})
+</script>
+</div></form></td></tr></tbody></table>
+<!-- <div class="sliocdqbox yqlj">
+<a>工厂直销</a><a>正品保证</a><a>中国电子商务协会会员单位</a><a>专注礼业</a><a>支付保障</a>
+</div> -->
+<div class="hbxian"></div>
+<div style="width: 100%;overflow: hidden;">
+	<div style="width: 1200px; margin: 0 auto;" class="Lqsue">
+		<div style="width: 100%; height: 40px;"></div>
+		<ul class="MqeUl" style="width: 130px;margin-left: 30px;">
+			<li id="Mqeds">全部商品分类</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=83" target="_blank">办公</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=58" target="_blank">数码</a>
+			</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=25" target="_blank">家居</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=26" target="_blank">家纺</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=24" target="_blank">厨具</a>
+			</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=63" target="_blank">服饰</a>、
+				<a href="/e/action/ListInfo.php?&amp;classid=60" target="_blank">箱包皮具</a>
+			</li>
+			
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;classid=79" target="_blank">商务</a>
+			</li>
+		</ul>
+		<!-- <ul class="MqeUl">
+			<li id="Mqeds">品牌企业</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;mid=1&amp;tempid=14&amp;ph=1&amp;qyjb=%E9%A9%B0%E5%90%8D%E5%95%86%E6%A0%87" target="_blank">驰名商标</a>
+			</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;mid=1&amp;tempid=14&amp;ph=1&amp;qyjb=%E7%9F%A5%E5%90%8D%E4%BC%81%E4%B8%9A" target="_blank">知名企业</a>
+			</li>
+			<li>
+				<a href="/e/action/ListInfo.php?&amp;mid=1&amp;tempid=14&amp;ph=1&amp;qyjb=%E8%AE%A4%E8%AF%81%E4%BC%81%E4%B8%9A" target="_blank">认证企业</a>
+			</li>
+		</ul>
+		<ul class="MqeUl">
+			<li id="Mqeds">体验店</li>
+			<li>
+				<a href="/tiyandian/tydlb/">体验店列表</a>
+			</li>
+            <li>
+				<a href="/tiyandian/tydcz/">体验店查找</a>
+			</li>
+            <li>
+				<a href="/e/member/login/">体验店管理</a>
+			</li>
+		</ul>
+		<ul class="MqeUl">
+			<li id="Mqeds">新闻动态</li>
+			<li>
+				<a href="/xinwendongtai/wangzhanxinwen/" target="_blank">网站新闻</a>
+			</li>
+
+			<li>
+				<a href="/xinwendongtai/gongsixinwen/" target="_blank">公司新闻</a>
+			</li>
+
+			<li>
+				<a href="/xinwendongtai/xingyexinwen/" target="_blank">行业新闻</a>
+			</li>
+
+			<li>
+				<a href="/xinwendongtai/lipinwenhua/" target="_blank">礼品文化</a>
+			</li>
+		</ul>
+		<ul class="MqeUl">
+			<li id="Mqeds">礼品卡</li>
+			<li>
+				<a href="/lipinka/goumai/" class="l1id18">礼品卡购买</a>
+			</li>
+            <li>
+			<a href="/lipinka/shangcheng/" class="l1id108">礼品卡商城</a>
+			</li>
+            <li>
+			<a href="/goumaishuoming/" class="l1id110">购买说明</a>
+			</li>
+		</ul> -->
+		<ul class="MqeUl" style="width:140px;">
+              <li id="Mqeds">帮助中心</li>
+              <li><a href="contactUs.html">联系我们</a> </li>
+    </ul>
+		<!-- <div><img src="./配送地址列表_files/Najde_19.jpg" style="margin-left: 30px;"> </div> -->
+	</div>
+</div>
+<div style="width:100%; height: 40px; border-bottom: 1px solid #d5d6d8;"></div>
+<div style="width:100%; height: 30px;"></div>
+<div style="width: 1200px; margin: 0 auto; text-align: center; line-height: 25px;" class="Mqesdre">
+	
+<p>静态页面开发者：李伟</p>
+  
+
+<iframe frameborder="0" style="margin:0 auto;" height="90" width="90" allowtransparency="true" scrolling="no" src="./配送地址列表_files/gshdimg.html" rel="nofollow"></iframe>
+<a href="http://www.cqgseb.cn/ztgsgl/WebSiteMonitoring/WebUI/XFWQ/Index.aspx?xh=313" target="_blank">
+  <img src="./配送地址列表_files/wqz.png" height="90" rel="nofollow">
+</a>
+</div>																																																										<div id="PcIndicate"></div>
+<div style="width:100%; height: 20px;"></div>
+<div class="fdright">
+    <ul>
+        <li onclick="GoBuycar()" class=""><b style="position:relative;"><img src="./img/fdgfbax_03.png"></b><span>购物车</span>
+            <div id="gwcjs"></div>
+        </li>
+        <li class="">
+            <a onclick="lxkfu()"><b><img src="./img/ikeezc.jpg" style=" width:30px; margin-top:-15px;"></b><span>联系客服</span></a>
+        </li>
+
+       
+
+        <li>
+          <a target="_blank" href="javascript:void(0)" onclick="$('html,body').stop().animate({'scrollTop':'0'})">
+            <b><img src="./img/fdgfbax_18.png" style="margin-left: -7px;margin-top: -7px;"></b><span>置顶</span>
+        </a></li>
+    </ul>
+</div>
+<script>
+  $(".fdright ul li").hover(function(){
+	$(this).addClass("on");
+	
+	},function(){
+		$(this).removeClass("on");
+		});
+</script>
+<!-- <div class="sogoutip" style="z-index: 2147483645; visibility: hidden; display: none;"></div><div class="sogoubottom" id="sougou_bottom" style="display: none;"></div><div id="ext_stophi" style="z-index: 2147483647;"><div class="extnoticebg"></div><div class="extnotice"><h2>关闭提示 <a href="/e/ShopSys/address/ListAddress.php#" title="关闭提示" id="closenotice" class="closenotice">关闭</a></h2><p id="sogouconfirmtxt"></p>  <a id="sogouconfirm" href="/e/ShopSys/address/ListAddress.php#" class="extconfirm">确 认</a> <a id="sogoucancel" href="/e/ShopSys/address/ListAddress.php#" class="extconfirm">取 消</a></div></div><div id="ext_overlay" class="ext_overlayBG" style="display: none; z-index: 2147483646;"></div><iframe class="sogou_sugg_feedbackquan" frameborder="0" scrolling="no" src="./配送地址列表_files/yun6.html" style="background: transparent; border: none; display: none; height: 84px; width: 100%; z-index: 2147483645;"></iframe> -->
+  <script>
+    /*解除语言翻译拖动的功能*/
+    window.onload=function(){
+        setTimeout(function(){document.getElementById("LauncherTranslatePhrase").onclick=function(){
+            document.getElementById("WidgetFloaterPanels").onmousedown=null;
+        };},100);
+       
+    }
+  </script>
+</body></html>

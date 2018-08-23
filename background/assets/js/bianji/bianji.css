@@ -1,0 +1,222 @@
+.pic_vessel1{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.pic_vessel1::before{
+	content:"";
+	display:table;
+	clear:both;
+}
+.pic_vessel1::after{
+	content:"";
+	display:table;
+	clear:both;
+}
+.pic_vessel1>li{
+	float:left;
+	margin:10px;
+	margin-left:0;
+	margin-bottom:30px;
+}
+.p_v_li{
+	width:100px;
+	height:100px;
+	position:relative;
+}
+.p_v_li>div{
+	opacity:0;
+	transition:all .3s;
+}
+.p_v_li:hover>div{
+	opacity:1;
+}
+.pic_file{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	position:relative;
+	border:1px dashed;
+	width:100px;
+	height:100px;
+}
+.content_pic_file{
+	text-align:center;
+}
+.content_pic_file>b{
+	font-size:14px;
+}
+.add_pic_name,.add_pic_file{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	opacity:0;
+}
+.d_d_close{
+    width:15px;
+    height:15px;
+    text-align:center;
+    line-height:15px;
+    position:absolute;
+    top:0;
+    right:0;
+    font-size:20px;
+    transform:rotateZ(45deg);
+    transition:all .2s;
+    cursor:pointer;
+    color:black;
+}
+.d_d_close:hover{
+	color:red;
+	text-shadow:0 0 1px;
+}
+.pic_vessel_one{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.p_v_o_file{
+	overflow:hidden;
+	position:relative;
+	width:100px;
+	height:100px;
+	box-shadow:inset 0 0 1px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border:1px dashed;
+}
+.pvof_content>b{
+    font-size:14px;
+}
+.pvof_input{
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	opacity:0;
+}
+.p_i_content{
+	background-color:white;
+	position:absolute;
+	z-index:2;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.p_i_c_plug{
+	opacity:0;
+	transition:all 0.3s;
+}
+.p_i_content:hover>.p_i_c_plug{
+	opacity:1;
+}
+.LWdown{
+	position:relative;
+}
+.L_downmenu{
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.L_downmenu_toggle{
+	z-index:2;
+	width:100%;
+	position:absolute;
+}
+.L_downmenu_toggle>ul{
+	background-color:white;
+}
+.L_downmenu_toggle1 .list-group{
+	margin-bottom:0;
+}
+.L_downmenu_toggle1 .list-group-item{
+	border-radius:0 !important;
+	border:none !important;
+	padding-left:20px;
+}
+.L_downmenu_toggle .list-group-item:hover{
+	text-decoration:none !important;
+	background-color:#f5f5f5 !important;
+}
+.L_downmenu_toggle1 .list-group-item.active{
+    background-color: #428bca !important;
+    padding-left:12px;
+    cursor:default;
+}
+
+.checked_choose{
+	display:flex;
+	align-items:center;
+	padding-top:7px;
+	justify-content:flex-start;
+}
+.checked_choose>div{
+	display:flex;
+	align-items:center;
+	width:40px;
+	justify-content:space-around;
+	margin:0 10px;
+}
+.checked_choose>div>div:first-child{
+	position:relative;
+}
+.c_square{
+	width:15px;
+	height:15px;
+	border:1px solid black;
+	background-color:white;
+	transition:all .2s;
+	border-radius:3px;
+}
+.c_label{
+	padding:0;
+	margin:0;	
+}
+input[name="handChoose"]{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	opacity:0;
+	z-index:2;
+}
+[data-choose="true"]+.c_s_cancel{
+	background-color:red;
+	border-color:red;
+}
+[data-choose="true"]+.c_s_cancel>div{
+	width:12px;
+	height:6px;
+	border:2px solid transparent;
+	border-bottom-color:white;
+	border-left-color:white;
+	margin-top:2px;
+	transform:rotateZ(-45deg);
+}
+.LevelTwoList optgroup{
+	font-size:15px !important;
+	font-weight:bold !important;
+    color:black;
+}
+.LevelOneList option,.LevelOneList a,.LevelOneList label,.LevelTwoList a,.LevelTwoList option,.LevelTwoList label{
+    color:black !important;    
+}
+.cf th{
+	text-align:center;
+}
+.apn_input{
+	text-align:center;
+}
+.app_input::-input-placeholder{
+	color:black;
+}
