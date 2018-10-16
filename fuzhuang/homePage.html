@@ -4,18 +4,17 @@
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>威有</title>
-        <script>
+    <script>
         /*解除语言翻译拖动的功能*/
         window.onload=function(){
             setTimeout(function(){document.getElementById("LauncherTranslatePhrase").onclick=function(){
                 document.getElementById("WidgetFloaterPanels").onmousedown=null;
             };},100);
-           
         } 
         function productA(hrefA,label){
-                var textA=label.innerText;
-                sessionStorage.setItem("productName",textA);
-                window.location.assign(hrefA);
+            var textA=label.innerText;
+            sessionStorage.setItem("productName",textA);
+            window.location.assign(hrefA);
         };
         function jqzoomNormal(hrefA,label){
             var srcI=$(label).parent().prev().find("img").attr("src");
