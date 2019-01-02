@@ -453,6 +453,7 @@
     align-items:center;	
 }
 .f_r_bottom>div{
+	flex:1;
 	padding:20px;
 	width:530px;
 	height:314px;
